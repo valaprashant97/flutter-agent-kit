@@ -1,0 +1,12 @@
+---
+description: State management conventions across BLoC, Riverpod, Provider, and ValueNotifier.
+globs: ["lib/**/bloc/**/*.dart", "lib/**/controllers/**/*.dart", "lib/**/providers/**/*.dart", "lib/**/notifiers/**/*.dart"]
+---
+
+# State Management Standards
+
+- **Follow Existing Patterns**: Never introduce a new state management package if the project already uses BLoC, Riverpod, or Provider.
+- **Immutability**: All emitted states must be immutable (`Equatable` or `@freezed`).
+- **Selective Rebuilds**: Use `BlocSelector`, `ref.watch(provider.select(...))`, or `context.select(...)` to prevent full screen rebuilds.
+- **No BuildContext in Controllers**: Never pass `BuildContext` into BLoCs or state notifiers.
+- **Reference**: See `rules/state-management/` and `skills/state-management/SKILL.md`.
