@@ -1,0 +1,21 @@
+name: Validate Agent Kit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-structure:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@v1
+
+      - name: Validate Markdown & Skill Manifests
+        shell: pwsh
+        run: |
+          ./scripts/PowerShell/validate-kit.ps1
