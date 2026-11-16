@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "dart-flutter": {
+      "command": "dart",
+      "args": ["run", "mcp_server_dart"]
+    },
+    "figma-flutter": {
+      "command": "npx",
+      "args": ["-y", "figma-flutter-mcp"],
+      "env": {
+        "FIGMA_ACCESS_TOKEN": "YOUR_FIGMA_ACCESS_TOKEN"
+      }
+    }
+  }
+}
