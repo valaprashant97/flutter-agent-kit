@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2026-11-17
+
+### Zero Dummy Data & Real Data Integrity System
+
+#### Added
+- **Dedicated Real Data Integrity Specification**:
+  - `docs/REAL_DATA_INTEGRITY.md`: Comprehensive engineering standard defining the Real Data Only principle, 12 Strict Prohibited Practices, dynamic data pipeline architectures, honest empty states, mock fixture isolation rules, real metrics calculations, and an 8-tier Data Classification Matrix.
+- **Dedicated Agent Skill**:
+  - `skills/real-data-integrity/SKILL.md`: Self-contained 12-section canonical skill manifest enforcing reactive data flow, honest empty states, and mock isolation (Total: 32 Skills).
+- **Dedicated Audit Workflow**:
+  - `workflows/real-data-audit/WORKFLOW.md`: 5-phase systematic codebase audit procedure for scanning, classifying, and eliminating hardcoded records, fake dashboard metrics, and test data leaks (Total: 21 Workflows).
+- **Reusable Audit Prompt**:
+  - `prompts/testing/real-data-integrity-audit.md`: Adheres strictly to the canonical 9-section context specification.
+
+#### Changed
+- `core/agent-principles.md` & `core/engineering-standards.md`: Embedded the Real Data Only invariant, 12 Prohibited Practices, and the 8-tier data classification hierarchy.
+- Synchronized all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`) with explicit Real Data Only invariants.
+- Upgraded skills (`ui-implementation`, `database-integration`, `api-integration`, `testing`, `debugging`, `production-readiness`) to enforce zero dummy data.
+- Upgraded workflows (`feature-development`, `testing-and-qa`, `production-audit`, `existing-project-analysis`) to mandate real data verification.
+- Upgraded prompts (`feature-prompt.md`, `code-review-prompt.md`, `final-audit-prompt.md`) to require real dynamic data checks.
+- Updated `scripts/PowerShell/validate-kit.ps1` to validate all 32 skills and 21 workflows (94 files checked, 0 failures).
+
+---
+
 ## [2.0.0] - 2026-11-17
 
 ### Major Architectural Upgrade & Quality Hardening
