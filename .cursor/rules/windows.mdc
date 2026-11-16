@@ -1,0 +1,13 @@
+---
+description: Native Windows desktop development rules, system tray, window management, and MSIX packaging.
+globs: ["windows/**", "lib/**/windows/**/*.dart", "lib/**/desktop/**/*.dart"]
+---
+
+# Windows Desktop Standards
+
+- **Lifecycle Invariant**: Closing a window $\ne$ process termination. Differentiate foreground, minimized, system tray, and terminated states.
+- **System Tray**: Implement `tray_manager` for minimize-to-tray workflows with context menus.
+- **Process Termination**: Only `windowManager.destroy()` or user selecting 'Exit' from tray menu should terminate the process.
+- **Post-Termination Background**: Tasks after process termination require Windows Task Scheduler (`schtasks.exe`).
+- **Paths**: Never hardcode drive letters; use `getApplicationSupportDirectory()`.
+- **Reference**: See `docs/WINDOWS_DEVELOPMENT.md` and `skills/windows-development/SKILL.md`.
