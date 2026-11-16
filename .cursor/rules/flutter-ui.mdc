@@ -1,0 +1,13 @@
+---
+description: Flutter UI widget composition, constraints, accessibility, and 4 mandatory states.
+globs: ["lib/**/presentation/**/*.dart", "lib/**/widgets/**/*.dart", "lib/**/pages/**/*.dart", "lib/**/screens/**/*.dart"]
+---
+
+# Flutter UI Composition Rules
+
+- **4 Mandatory States**: Explicitly handle Loading, Success, Empty, and Error states for all asynchronous data.
+- **BuildContext Safety**: Never use `BuildContext` after `await` without `if (!context.mounted) return;`.
+- **Constraint Safety**: Wrap unbounded flex children (`ListView`, `GridView`) in `Expanded` or `Flexible` to prevent `RenderFlex` overflows.
+- **Accessibility**: Provide 48x48dp tap targets (32x32dp on desktop) and semantic labels or tooltips on all icon buttons.
+- **Theme Binding**: Never hardcode colors; use `Theme.of(context).colorScheme` or custom `ThemeExtension`.
+- **Reference**: See `rules/flutter/`, `rules/ui-ux/`, and `skills/ui-implementation/SKILL.md`.
