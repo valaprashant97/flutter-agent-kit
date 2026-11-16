@@ -1,0 +1,32 @@
+name: Flutter CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze-and-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Verify Formatting & Static Analysis
+        run: |
+          dart format --output=none --set-exit-if-changed .
+          flutter analyze --fatal-infos
+
+      - name: Run Test Suite
+        run: flutter test --coverage
+
+      - name: Build Windows Desktop Release
+        run: flutter build windows --release

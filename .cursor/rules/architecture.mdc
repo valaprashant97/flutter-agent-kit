@@ -1,0 +1,11 @@
+---
+description: Architectural separation of concerns, Clean Architecture layering, and feature-first modularization.
+globs: ["lib/**/*.dart"]
+---
+
+# Architecture & Layering Rules
+
+- **Feature-First**: Organize code by business domain (`features/<feature>/`) with internal `data/`, `domain/`, and `presentation/` layers.
+- **Inward Dependencies**: Presentation depends on Domain; Data depends on Domain. Domain is pure Dart with zero Flutter or network dependencies.
+- **Contract Decoupling**: Repositories are abstract contracts in `domain/repositories/` and implemented in `data/repositories/`.
+- **Reference**: See `rules/architecture/` and `skills/flutter-architecture/SKILL.md`.
