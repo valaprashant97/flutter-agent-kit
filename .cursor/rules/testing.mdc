@@ -1,0 +1,12 @@
+---
+description: Unit, widget, and integration testing rules with AAA pattern and mocktail.
+globs: ["test/**/*.dart", "integration_test/**/*.dart"]
+---
+
+# Testing Standards
+
+- **AAA Pattern**: Structure tests clearly into Arrange, Act, and Assert blocks.
+- **Zero Real I/O**: Tests in `test/` must never make live network calls or write to host disks. Use `mocktail`.
+- **Never Weaken Assertions**: Never delete tests or relax exact assertions (`equals`) to pass tests.
+- **Widget Pumping**: Use `tester.pumpAndSettle()` for animations, or bounded pumps for repeating tickers.
+- **Reference**: See `rules/testing/` and `skills/testing/SKILL.md`.
