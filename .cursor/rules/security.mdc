@@ -1,0 +1,11 @@
+---
+description: Secrets management, secure storage, and network transport security.
+globs: ["lib/**/*.dart", "pubspec.yaml", "android/**", "ios/**", "windows/**"]
+---
+
+# Security & Secrets Standards
+
+- **Zero Hardcoded Secrets**: Never commit API keys, private tokens, or passwords to git. Use `--dart-define`.
+- **Encrypted Storage**: Store JWTs, tokens, and credentials in `FlutterSecureStorage` (not plain `SharedPreferences`).
+- **Transport Security**: Enforce HTTPS. Never disable SSL/TLS certificate validation in release builds.
+- **Reference**: See `rules/security/` and `skills/security-audit/SKILL.md`.
