@@ -1,0 +1,13 @@
+---
+description: Modern Dart 3.x standards, null safety, pattern matching, records, and sealed classes.
+globs: ["**/*.dart"]
+---
+
+# Dart 3.x Development Standards
+
+- **Null Safety**: Types are non-nullable by default. Avoid `dynamic`. Never use `!` force-unwrap without prior null check.
+- **Pattern Matching**: Prefer switch expressions over nested `if-else` cascades. Ensure exhaustive matching over sealed types.
+- **Records**: Use typed records `(TypeA, TypeB)` for multiple return values instead of single-use tuple classes.
+- **Sealed Types**: Model all domain states and results with `sealed class`.
+- **Clean Idioms**: Use collection-if, collection-for, and `final` local variables.
+- **Reference**: See `rules/dart/` and `skills/dart-best-practices/SKILL.md`.
