@@ -1,0 +1,12 @@
+---
+description: 60/120 FPS jank elimination, const constructors, and memory leak prevention.
+globs: ["lib/**/*.dart"]
+---
+
+# Performance Standards
+
+- **Frame Budget**: 16.6ms (60 FPS) and 8.3ms (120 FPS). No heavy calculations or I/O in `build()`.
+- **Repaint Boundaries**: Wrap frequently repainted animations in `RepaintBoundary`.
+- **Memory Hygiene**: Always dispose controllers, text nodes, and stream subscriptions in `dispose()`.
+- **Image Downscaling**: Provide `cacheWidth` and `cacheHeight` on high-resolution image decodes.
+- **Reference**: See `rules/performance/` and `skills/performance/SKILL.md`.
