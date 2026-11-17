@@ -7,12 +7,12 @@ You are acting as a Senior Product Designer and UX/UI Design Systems Engineer sp
 ## 1. PROJECT CONTEXT
 - **Target Application**: [APP NAME & DOMAIN]
 - **Target Platforms**: [Windows Desktop, Android, iOS, Web, macOS, Linux]
-- **Foundation Documents**: `docs/PRD.md` and `docs/ARCHITECTURE.md`
+- **Foundation Documents**: `docs/PRD.md`, `docs/ARCHITECTURE.md`, and `docs/DESIGN_SYSTEM_STANDARDS.md`
 
 ---
 
 ## 2. OBJECTIVE
-Author a comprehensive, production-grade `docs/DESIGN.md` using `templates/DESIGN.md` that serves as the visual design system specification, defining design tokens, color palettes, typography scales, spacing grids, component states, and responsive breakpoints.
+Author a comprehensive, production-grade `docs/DESIGN.md` using `templates/DESIGN.md` that serves as the single source of truth for the visual design system, defining product archetype, design tokens, 13 canonical color roles, typography scales, 4pt/8pt spacing grids, component states, and responsive breakpoints.
 
 ---
 
@@ -24,26 +24,31 @@ Author a comprehensive, production-grade `docs/DESIGN.md` using `templates/DESIG
 
 ## 4. REQUIRED INVESTIGATION
 1. Review `docs/PRD.md` to identify target user demographics, usage lighting conditions, and device form factors.
-2. Check Material 3 guidelines and color science rules for WCAG AA compliance (contrast ratio $\ge$ 4.5:1).
-3. If Figma tokens or brand style guides exist, inspect them for exact hex values and typography weights.
+2. Select an intentional product archetype from the 7 design direction archetypes in `docs/DESIGN_SYSTEM_STANDARDS.md` (e.g. Professional & Enterprise, Productivity-Focused, Creative & Expressive, Data-Focused).
+3. Check Material 3 guidelines and color science rules for WCAG AA compliance (contrast ratio $\ge$ 4.5:1).
+4. If Figma tokens or brand style guides exist, inspect them for exact hex values and typography weights.
 
 ---
 
 ## 5. CONSTRAINTS
-- Strict compliance with Material 3 theming paradigms.
-- Complete palette definitions required for **both Light and Dark modes**.
+- Strict compliance with Material 3 theming paradigms and `docs/DESIGN_SYSTEM_STANDARDS.md`.
+- One application, one coherent visual identity: do not design screens in isolation.
+- Complete palette definitions required for **both Light and Dark modes** across all 13 canonical color roles.
+- Standardize on the 4pt/8pt spacing scale (`AppSpacing`) and standard corner radii (`AppRadii`).
 - All interactive components must define states: Default, Hover (desktop/web), Pressed, Focused, Disabled, Loading, and Error.
 - Do not write Dart code during this design token specification phase.
 
 ---
 
 ## 6. ACCEPTANCE CRITERIA
-- [ ] Complete color palette with hex codes and role assignments (Primary, Surface, Error, Containers, Outlines).
-- [ ] Semantic tokens defined: Success, Warning, Info, Error.
+- [ ] Product archetype and brand personality clearly specified.
+- [ ] Complete color palette with hex codes and role assignments across 13 roles (Primary, Surface, Error, Containers, Outlines).
+- [ ] Semantic tokens defined via `ThemeExtension`: Success, Warning, Info.
 - [ ] Typography scale mapped directly to Flutter's `TextTheme` (Display, Headline, Title, Body, Label).
-- [ ] 4pt/8pt spacing grid and corner radius tokens established.
+- [ ] 4pt/8pt spacing grid (`AppSpacing`) and corner radius tokens (`AppRadii`) established.
 - [ ] Responsive layout breakpoints: Mobile (<600dp), Tablet (600-1024dp), Desktop (>1024dp).
-- [ ] Specifications for Skeleton loading shimmer and Empty states.
+- [ ] Specifications for Skeleton loading shimmer and honest Empty states.
+- [ ] Mandatory 13-point Design Checklist included.
 
 ---
 
