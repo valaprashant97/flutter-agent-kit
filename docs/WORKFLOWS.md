@@ -71,7 +71,7 @@ flowchart TD
 | **16** | [`windows-desktop`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/windows-desktop/WORKFLOW.md) | Single-instance mutex, Per-Monitor V2 DPI, system tray, toast notifications |
 | **17** | [`testing-and-qa`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/testing-and-qa/WORKFLOW.md) | Unit, widget, golden visual, and integration test execution with coverage |
 | **18** | [`security-review`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/security-review/WORKFLOW.md) | Secret scanning, storage encryption audit, OWASP MASVS compliance check |
-| **19** | [`performance-review`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-review/WORKFLOW.md) | Frame rate profiling, memory leak detection, isolate offloading, and jank fix |
+| **19** | [`performance-review`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-review/WORKFLOW.md) | Rapid profiling, 60/120 FPS frame budget enforcement, and targeted jank remediation |
 | **20** | [`release-preparation`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/release-preparation/WORKFLOW.md) | Version bumping, code signing, obfuscated compilation, and MSIX/AAB packaging |
 | **21** | [`production-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/production-audit/WORKFLOW.md) | 50-point pre-flight launch audit and formal deployment readiness certification |
 | **22** | [`design-consistency-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/design-consistency-audit/WORKFLOW.md) | Audits, detects, and harmonizes design drift, hardcoded styling, and theme contrast |

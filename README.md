@@ -36,7 +36,7 @@ graph TD
     Entry --> Core[Core Engineering System: Principles, Standards, Change Discipline, Verification]
     
     subgraph Operational Foundations
-        Core --> Rules[45+ Domain Rules: Dart, Flutter, State, Database, Error Handling, Security, Platforms]
+        Core --> Rules[50+ Domain Rules: Dart, Flutter, State, Database, Error Handling, Security, Platforms]
         Core --> Skills[34 Specialized Skills: 12 Canonical Sections + YAML Frontmatter]
         Core --> Workflows[24 Lifecycle Workflows: From Idea to Production Launch]
     end
@@ -93,7 +93,7 @@ Complete engineering protocols from product discovery to production release:
 16. `windows-desktop`: Single-instance mutex, DPI, tray, and toasts.
 17. `testing-and-qa`: Automated unit, widget, golden, and integration QA.
 18. `security-review`: Secret scanning and OWASP MASVS compliance.
-19. `performance-review`: 60/120 FPS profiling and isolate offloading.
+19. `performance-review`: Rapid profiling, 60/120 FPS frame budget enforcement, and targeted jank remediation.
 20. `release-preparation`: Obfuscated builds, signing, and packaging.
 21. `production-audit`: 50-point pre-flight launch certification.
 22. `design-consistency-audit`: Design drift detection, tokenization, and visual cohesion audit.

@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.0] - 2026-11-17
+
+### Skill System Audit, Scope Differentiation & Launch Certification
+
+#### Added
+- **Skill System Audit Report**:
+  - `docs/SKILL_SYSTEM_AUDIT.md`: Complete audit report evaluating all 34 skills, 24 workflows, 51 rules, 19 prompts, 7 core files, and 5 agent entry points against structural compliance, scope distinctness, actionability, and token efficiency.
+
+#### Changed
+- `skills/performance/SKILL.md`: Differentiated from algorithmic engineering; focused explicitly on runtime DevTools timeline profiling, 60/120 FPS frame budget enforcement, raster/UI thread diagnosis, and widget rebuild optimization. Added cross-reference to `performance-engineering` in Section 12.
+- `skills/performance-engineering/SKILL.md`: Sharpened focus on algorithmic efficiency, Big-O computational time & auxiliary space complexity, collection pre-indexing, memory lifecycle management, and isolate offloading. Added cross-reference to `performance` in Section 12.
+- `workflows/performance-review/WORKFLOW.md`: Upgraded from a brief outline to a structured, 4-phase rapid profiling procedure with canonical Entry Conditions, Step-by-Step Procedure, and Exit Criteria checklist, clearly scoped as a targeted quick fix alongside comprehensive `performance-audit`.
+- `docs/AGENT_COMPATIBILITY.md`: Synchronized with current catalog sizes (34 skills, 24 workflows, 51 rules, 7 core files) and core invariant references.
+- `docs/FINAL_QUALITY_AUDIT.md`: Updated certification metrics and resolution matrix to reflect all 34 skills and 24 workflows.
+- `core/engineering-standards.md`: Cleaned up trailing blank lines.
+- `scripts/PowerShell/validate-kit.ps1`: Extended validation coverage to 103 files including all audit reports with 100% pass rate.
+
+---
+
 ## [2.4.0] - 2026-11-17
 
 ### Advanced Dart & Flutter Performance Engineering System
