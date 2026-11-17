@@ -235,6 +235,3 @@ final class AuthFailure extends Failure {
 - **Mandatory 15-Point Performance Checklist**: Every implementation must satisfy the 15-point checklist prior to completion.
 - **Specification Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
 
-
-
-
