@@ -5,7 +5,10 @@ void main() {
   final docsDir = Directory('docs');
   int brokenLinks = 0;
 
-  final mdFiles = docsDir.listSync(recursive: true).whereType<File>().where((f) => f.path.endsWith('.md'));
+  final mdFiles = docsDir
+      .listSync(recursive: true)
+      .whereType<File>()
+      .where((f) => f.path.endsWith('.md'));
 
   for (final file in mdFiles) {
     final lines = file.readAsLinesSync();
@@ -13,7 +16,9 @@ void main() {
       final matches = RegExp(r'\[.+?\]\((.+?\.md)\)').allMatches(line);
       for (final match in matches) {
         final targetPath = match.group(1);
-        if (targetPath != null && !targetPath.startsWith('http') && !targetPath.startsWith('#')) {
+        if (targetPath != null &&
+            !targetPath.startsWith('http') &&
+            !targetPath.startsWith('#')) {
           String pathToCheck = targetPath;
           if (pathToCheck.startsWith('file:///')) {
             try {
@@ -27,7 +32,9 @@ void main() {
           final resolvedFile = File('${file.parent.path}/$pathToCheck');
           final rootResolved = File(pathToCheck);
           if (!resolvedFile.existsSync() && !rootResolved.existsSync()) {
-            stderr.writeln('Potential broken link in ${file.path}: $targetPath');
+            stderr.writeln(
+              'Potential broken link in ${file.path}: $targetPath',
+            );
             brokenLinks++;
           }
         }

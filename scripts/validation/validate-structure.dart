@@ -3,7 +3,6 @@ import 'dart:io';
 /// Validates Flutter Agent Kit directory integrity and skill manifests.
 void main() {
   stdout.writeln('Running Flutter Agent Kit Dart Structure Validator...');
-  final rootDir = Directory.current;
   int errors = 0;
 
   // 1. Validate Core files
@@ -44,14 +43,21 @@ void main() {
     }
 
     final content = skillManifest.readAsStringSync();
-    if (!content.startsWith('---') || !content.contains('name:') || !content.contains('description:')) {
-      stderr.writeln('Skill missing valid YAML frontmatter: ${skillManifest.path}');
+    if (!content.startsWith('---') ||
+        !content.contains('name:') ||
+        !content.contains('description:')) {
+      stderr.writeln(
+        'Skill missing valid YAML frontmatter: ${skillManifest.path}',
+      );
       errors++;
     }
 
     // Verify presence of standard 12 sections
-    if (!content.contains('## 1. Skill Name') || !content.contains('## 11. Completion Criteria')) {
-      stderr.writeln('Skill manifest missing canonical sections: ${skillManifest.path}');
+    if (!content.contains('## 1. Skill Name') ||
+        !content.contains('## 11. Completion Criteria')) {
+      stderr.writeln(
+        'Skill manifest missing canonical sections: ${skillManifest.path}',
+      );
       errors++;
     }
   }
