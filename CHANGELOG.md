@@ -7,6 +7,87 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.0] - 2026-11-17
+
+### Advanced Dart & Flutter Performance Engineering System
+
+#### Added
+- **Performance Engineering & Algorithmic Efficiency Specification**:
+  - `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`: Authoritative engineering standard establishing the performance decision hierarchy ($\text{Correctness} > \text{Reliability} > \text{Maintainability} > \text{Measured Performance} > \text{Premature Optimization}$), Big-O time and auxiliary space complexity analysis, data structure selection matrix ($O(1)$ lookups, `StringBuffer`, lazy `Iterable` evaluations), pure `build()` methods, `const` subtrees, granular state rebuild scoping, resource disposal in `dispose()`, safe image decoding (`cacheWidth`/`cacheHeight` with DPR), isolate offloading rules, DevTools profiling protocols, standardized code review complexity format, and the 15-point mandatory performance checklist.
+- **Dedicated Agent Skill**:
+  - `skills/performance-engineering/SKILL.md`: Self-contained 12-section canonical skill manifest enforcing algorithmic efficiency, Big-O complexity analysis, memory leak prevention, Flutter frame rendering optimization, and isolate concurrency (Total: 34 Skills).
+- **Dedicated Audit Workflow**:
+  - `workflows/performance-audit/WORKFLOW.md`: 5-phase systematic audit workflow for discovering algorithmic bottlenecks, diagnosing memory leaks, scoping widget rebuilds, auditing isolate concurrency, and verifying performance via DevTools (Total: 24 Workflows).
+- **Standardized Algorithmic Efficiency Prompt**:
+  - `prompts/performance/algorithmic-efficiency-review.md`: Enforces the canonical 9-section context specification for executing algorithmic complexity and performance reviews (Total: 19 Prompts).
+
+#### Changed
+- `core/agent-principles.md`: Added Section 6 "The Performance Engineering & Algorithmic Efficiency Invariant".
+- `core/engineering-standards.md`: Added Section 11 "Advanced Performance Engineering & Algorithmic Efficiency Standard".
+- Aligned all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`) with explicit performance engineering invariants referencing `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`.
+- Upgraded `rules/dart/async-concurrency.md`: Cross-referenced isolate offloading rules and payload sizing trade-offs.
+- Upgraded `rules/flutter/widget-lifecycle.md`: Emphasized pure `build()` methods and controller disposal in `dispose()`.
+- Upgraded `skills/code-review/SKILL.md`: Mandated the 4-line `**Performance Analysis**` block for code generation and review.
+- Upgraded `workflows/feature-development/WORKFLOW.md`: Integrated the 15-point performance checklist into vertical-slice implementation and exit criteria.
+- Upgraded `workflows/production-audit/WORKFLOW.md`: Cross-referenced performance engineering skills and standards.
+- Synchronized `docs/SKILLS_CATALOG.md` (34 skills), `docs/WORKFLOWS.md` (24 workflows), `docs/ARCHITECTURE.md`, `README.md`, and `TASKS.md`.
+- Updated automated validation suites (`scripts/PowerShell/validate-kit.ps1`, `tests/AGENT_KIT_VALIDATION.md`) to validate 102 files, 34 skills, and 24 workflows with 0 failures.
+
+---
+
+## [2.3.0] - 2026-11-17
+
+### Navigation Clarity, Icon Usability & Action Discoverability System
+
+#### Added
+- **Navigation Clarity & Icon Usability Specification**:
+  - `docs/NAVIGATION_AND_ICON_STANDARDS.md`: Canonical standard establishing the 3–5 mobile bottom nav destination rule, universal vs domain icon policy, action-descriptive accessibility semantics, 4-tier action hierarchy (Primary/Secondary/Tertiary/Destructive), progressive disclosure menus, and the 10-point navigation & action discoverability checklist.
+- **Dedicated Agent Skill**:
+  - `skills/navigation-clarity/SKILL.md`: Self-contained 12-section canonical skill manifest enforcing icon usability, visible text pairings, navigation hierarchy, and destructive action confirmation (Total: 33 Skills).
+- **Dedicated Audit Workflow**:
+  - `workflows/navigation-usability-audit/WORKFLOW.md`: 5-phase systematic audit workflow for scanning navigation elements, detecting bare ambiguous icons, verifying action-descriptive labels, inspecting destructive action safeguards, and proposing non-destructive upgrades (Total: 23 Workflows).
+- **Standardized Navigation Usability Audit Prompt**:
+  - `prompts/ui-ux/navigation-icon-audit.md`: Enforces the canonical 9-section context specification for executing navigation clarity audits (Total: 18 Prompts).
+
+#### Changed
+- `core/agent-principles.md`: Added Section 5 "The Navigation Clarity & Action Discoverability Invariant".
+- `core/engineering-standards.md`: Added Section 10 "Navigation Clarity, Icon Usability & Action Discoverability Standard".
+- Aligned all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`) with explicit navigation clarity invariants referencing `docs/NAVIGATION_AND_ICON_STANDARDS.md`.
+- Upgraded `skills/navigation/SKILL.md`: Embedded 3–5 destination constraints and cross-referenced `navigation-clarity`.
+- Upgraded `skills/accessibility/SKILL.md`: Added action-descriptive label rules (describing operational action instead of icon graphic name) and cross-referenced `navigation-clarity`.
+- Upgraded `rules/ui-ux/accessibility.md`: Enforced action-descriptive accessibility semantics and destructive action confirmation patterns.
+- Upgraded `skills/code-review/SKILL.md`: Added `navigation-clarity` to verification matrix and related skills.
+- Synchronized `docs/SKILLS_CATALOG.md` (33 skills), `docs/WORKFLOWS.md` (23 workflows), `docs/ARCHITECTURE.md`, `README.md`, and `TASKS.md`.
+- Updated automated validation suites (`scripts/PowerShell/validate-kit.ps1`, `tests/AGENT_KIT_VALIDATION.md`) to validate 99 files, 33 skills, and 23 workflows with 0 failures.
+
+---
+
+## [2.2.0] - 2026-11-17
+
+### Global Design Consistency & Design System Enforcement
+
+#### Added
+- **Global Design Consistency Specification**:
+  - `docs/DESIGN_SYSTEM_STANDARDS.md`: Canonical standard establishing the One Coherent Visual Identity principle, 12-step Design System First protocol, 13 canonical color roles, 4pt/8pt modular spacing grid (`AppSpacing`), standard corner radii (`AppRadii`), 7 design direction archetypes, native Flutter theming architecture, reusable component library specifications, visual inspection protocols, and brownfield audit matrix.
+- **Dedicated Design Consistency Audit Workflow**:
+  - `workflows/design-consistency-audit/WORKFLOW.md`: 5-phase systematic audit workflow for detecting and eliminating hardcoded colors, arbitrary spacing, mismatched corner radii, competing icon sets, and light/dark theme contrast failures (Workflow #22).
+- **Standardized Design Consistency Audit Prompt**:
+  - `prompts/ui-ux/design-consistency-audit.md`: Enforces the canonical 9-section context specification for executing design consistency audits (Prompt #17).
+
+#### Changed
+- `skills/design-system/SKILL.md`: Upgraded with global design consistency principles, the 7 product archetypes, reusable component guidelines, and the 13-point design checklist.
+- `templates/DESIGN.md`: Expanded into a complete design system blueprint incorporating archetype selection, 13 color roles, typography scale, spacing grid, radii, elevation, iconography, and the 13-point checklist.
+- `core/agent-principles.md`: Added Section 4 "The Global Design Consistency Invariant".
+- `core/engineering-standards.md`: Added Section 9 "Global Design Consistency & Design System Standard".
+- Synchronized all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`) with explicit design consistency requirements referencing `docs/DESIGN_SYSTEM_STANDARDS.md`.
+- Upgraded `skills/ui-implementation/SKILL.md` and `skills/responsive-design/SKILL.md` to mandate design system tokenization and checklist compliance.
+- Upgraded `workflows/design-system/WORKFLOW.md`, `workflows/ui-redesign/WORKFLOW.md`, and `workflows/feature-development/WORKFLOW.md` to enforce global design consistency.
+- Upgraded `prompts/ui-ux/design-prompt.md` and `prompts/feature-development/feature-prompt.md` to require design tokens and component reuse.
+- Updated `docs/SKILLS_CATALOG.md`, `docs/WORKFLOWS.md`, `docs/ARCHITECTURE.md`, and `README.md` to reflect 22 lifecycle workflows.
+- Updated validation scripts (`validate-kit.ps1`, `validate-structure.dart`) and validation docs (`tests/AGENT_KIT_VALIDATION.md`).
+
+---
+
 ## [2.1.0] - 2026-11-17
 
 ### Zero Dummy Data & Real Data Integrity System

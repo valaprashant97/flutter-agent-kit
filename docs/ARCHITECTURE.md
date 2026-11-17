@@ -95,18 +95,19 @@ flutter-agent-kit/
 │   ├── code-review/            # Severity-tiered reviews: Critical, High, Medium, Low
 │   ├── security-audit/         # Threat modeling, secret leaks, reverse-engineering defense
 │   ├── performance/            # DevTools timeline, memory snapshotting, repainting isolation
+│   ├── performance-engineering/# Algorithmic efficiency, Big-O complexity, memory lifecycles, isolate concurrency
 │   ├── accessibility/          # Semantics, screen readers, minimum tap targets, high contrast
 │   ├── localization/           # intl, ARB translation files, l10n code generation
 │   ├── packaging/              # Release builds, obfuscation, split debug info
 │   ├── msix-release/           # Windows MSIX packaging, Store manifests, self-signing
 │   └── production-readiness/   # 50-point pre-flight checklist before production deployment
 │
-├── workflows/                  # End-to-end multi-step procedures
-├── prompts/                    # Battle-tested prompt library
-├── templates/                  # Standardized project documentation blueprints
+├── workflows/                  # 24 End-to-end multi-step procedures (inc. performance-audit)
+├── prompts/                    # 19 Standardized prompts (9-section context specification)
+├── templates/                  # Standardized project documentation blueprints (PRD, DESIGN, etc.)
 ├── mcp/                        # Model Context Protocol configs & guides
 ├── scripts/                    # Automation & validation scripts
-└── docs/                       # Comprehensive documentation
+└── docs/                       # Comprehensive documentation (inc. PERFORMANCE_ENGINEERING_STANDARDS.md)
 ```
 
 ---
@@ -122,6 +123,10 @@ $$\text{Correctness} > \text{Requirement Compliance} > \text{Existing Code Consi
 2. **Surgical Precision**: Changes must be isolated to the minimum lines necessary to achieve the requirement. Adjacent code, unrelated formatting, and functioning abstractions must not be refactored without explicit user instruction.
 3. **Zero Speculative Abstraction**: Agents must never introduce design patterns, interfaces, generic wrappers, or utility classes for single-use implementations.
 4. **Verified Completion**: A task is never marked complete until appropriate verification commands (`flutter analyze`, `flutter test`, or release compilation) have run and passed with zero errors.
+5. **Real Data Integrity**: Never introduce fake dummy records, static sample arrays, or fabricated metrics in production code. UI components must subscribe reactively to real application state with honest empty and error states (`docs/REAL_DATA_INTEGRITY.md`).
+6. **Global Design Consistency**: Every application must maintain one coherent visual identity across all screens. Bind all UI to centralized design tokens, 4pt/8pt modular spacing (`AppSpacing`), and reusable components; verify the 13-point design checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
+7. **Navigation Clarity & Action Discoverability**: Keep 3–5 mobile bottom nav destinations with visible labels. Restrict icon-only buttons to universal conventions; provide action-descriptive accessibility labels and require confirmation modals for destructive operations (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
+8. **Performance Engineering & Algorithmic Efficiency**: Every implementation must consider Time and Auxiliary Space complexity. Enforce $O(1)$ lookups, `StringBuffer` in loops, pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal, image memory constraints, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
 
 ---
 
