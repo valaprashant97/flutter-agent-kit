@@ -73,7 +73,9 @@ $docFiles = @(
     "docs\WORKFLOWS.md",
     "docs\AGENT_COMPATIBILITY.md",
     "docs\WINDOWS_DEVELOPMENT.md",
-    "docs\FAQ.md"
+    "docs\FAQ.md",
+    "docs\SKILL_SYSTEM_AUDIT.md",
+    "docs\FINAL_QUALITY_AUDIT.md"
 )
 foreach ($file in $docFiles) {
     Assert-FileExists $file "Documentation"
