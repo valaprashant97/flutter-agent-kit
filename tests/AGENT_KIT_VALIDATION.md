@@ -20,9 +20,9 @@ The kit provides four layers of automated verification:
 
 | Suite Name | Script / Test File | Purpose & Verification Scope | Threshold |
 | :--- | :--- | :--- | :--- |
-| **PowerShell Master Validator** | `scripts/PowerShell/validate-kit.ps1` | Validates file integrity, minimum byte sizes, YAML frontmatter, 32 skills, and 21 workflows | 0 Failures |
+| **PowerShell Master Validator** | `scripts/PowerShell/validate-kit.ps1` | Validates file integrity, minimum byte sizes, YAML frontmatter, 34 skills, and 24 workflows | 0 Failures |
 | **Dart Structure Validator** | `scripts/validation/validate-structure.dart` | Validates directory layout, core engineering policies, 12 canonical skill sections, and workflows | 0 Errors |
-| **Skill Schema Test** | `tests/validation/skill_schema_test.dart` | Validates that all 32 skills have standard YAML frontmatter (`name:`, `description:`) | 32/32 Passed |
+| **Skill Schema Test** | `tests/validation/skill_schema_test.dart` | Validates that all 34 skills have standard YAML frontmatter (`name:`, `description:`) | 34/34 Passed |
 | **Directory Completeness Test**| `tests/structure/structure_test.dart` | Validates the existence of all 20 required directories including `rules/error-handling` | 20/20 Passed |
 | **Markdown Link Validator** | `tests/links/link_validator_test.dart` | Parses and validates all internal markdown links (`[text](path.md)`) across `docs/` | 0 Broken Links |
 
@@ -67,8 +67,8 @@ When agents develop or modify Flutter applications using this kit, the following
 
 ## 5. Latest Verification Evidence (2026-11-17)
 
-- `scripts/PowerShell/validate-kit.ps1`: **PASSED (94 files checked, 32 skills, 21 workflows, 0 failures)**
-- `scripts/validation/validate-structure.dart`: **PASSED (32 skills, 21 workflows, 0 errors)**
-- `tests/validation/skill_schema_test.dart`: **PASSED (32 skills conforming to schema)**
+- `scripts/PowerShell/validate-kit.ps1`: **PASSED (102 files checked, 34 skills, 24 workflows, 0 failures)**
+- `scripts/validation/validate-structure.dart`: **PASSED (34 skills, 24 workflows, 0 errors)**
+- `tests/validation/skill_schema_test.dart`: **PASSED (34 skills conforming to schema)**
 - `tests/structure/structure_test.dart`: **PASSED (All required directories verified)**
 - `tests/links/link_validator_test.dart`: **PASSED (0 broken links detected)**
