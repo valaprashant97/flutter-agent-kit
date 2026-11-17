@@ -1,4 +1,4 @@
-name: Flutter CI Pipeline
+name: Flutter Agent Kit CI
 
 on:
   push:
@@ -12,21 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
 
-      - name: Install Dependencies
-        run: flutter pub get
+      - name: Verify Dart formatting
+        run: dart format --output=none --set-exit-if-changed scripts tests
 
-      - name: Verify Formatting & Static Analysis
+      - name: Run validation suite
         run: |
-          dart format --output=none --set-exit-if-changed .
-          flutter analyze --fatal-infos
-
-      - name: Run Test Suite
-        run: flutter test --coverage
-
-      - name: Build Windows Desktop Release
-        run: flutter build windows --release
+          dart run scripts/validation/validate-structure.dart
+          dart run tests/validation/skill_schema_test.dart
+          dart run tests/structure/structure_test.dart
+          dart run tests/links/link_validator_test.dart
