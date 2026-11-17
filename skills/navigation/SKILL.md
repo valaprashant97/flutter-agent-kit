@@ -32,6 +32,7 @@ Provides production standards for implementing declarative routing using `go_rou
 
 ## 7. Engineering Rules
 - **Declarative Navigation**: Prefer `context.goNamed(...)` or `context.go(...)` over imperative `Navigator.push()` to maintain synchronized URL state on Web and Desktop.
+- **Navigation Clarity & Scalability**: Mobile bottom navigation bars must adhere to the 3–5 destination rule with readable labels. Secondary actions must be organized into menus or sidebars (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
 - **Route Parameter Validation**: Always validate route parameters (`state.pathParameters['id']`) before passing them to domain layers.
 - **Listen to Auth State**: Pass an auth `Listenable` (e.g., `refreshListenable: GoRouterRefreshStream(authBloc.stream)`) to `GoRouter` so redirects re-evaluate automatically when auth state changes.
 
@@ -95,6 +96,7 @@ final appRouter = GoRouter(
 - Web URL paths update accurately.
 
 ## 12. Related Skills
+- `navigation-clarity`
 - `flutter-architecture`
 - `authentication`
 - `responsive-design`

@@ -33,6 +33,7 @@ Ensures Flutter applications meet WCAG 2.1 AA accessibility standards: screen re
 
 ## 7. Engineering Rules
 - **No Unlabeled Buttons**: Every button must announce its action to screen readers.
+- **Action-Descriptive Labels**: Semantic labels and tooltips on interactive icon controls must describe the operational action (e.g. "Search invoice history"), never merely the visual graphic name (e.g. "search icon") (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
 - **Never Disable Font Scaling Globally**: Do NOT apply `textScaler: TextScaler.noScaling` across an entire application. Layouts must be flexible enough to accommodate larger text.
 - **Form Error Announcement**: Form validation errors must be read aloud by screen readers when validation fails.
 
@@ -77,6 +78,7 @@ Semantics(
 - Text contrast passes WCAG AA criteria.
 
 ## 12. Related Skills
+- `navigation-clarity`
 - `ui-implementation`
 - `design-system`
 - `testing`

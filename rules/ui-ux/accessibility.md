@@ -19,14 +19,15 @@ These rules ensure Flutter applications meet WCAG 2.1 AA accessibility guideline
 ---
 
 ## 2. Screen Reader Semantics
-- **Icon-Only Buttons**: Every `IconButton` or clickable gesture without adjacent text **must** include a `tooltip` or `Semantics(label: ...)`:
+- **Icon-Only Buttons**: Every `IconButton` or clickable gesture without adjacent text **must** include an action-descriptive `tooltip` or `Semantics(label: ...)`:
   ```dart
   IconButton(
     icon: const Icon(Icons.delete),
-    tooltip: 'Delete item',
+    tooltip: 'Delete draft invoice', // Action-descriptive, NOT "delete icon"
     onPressed: _delete,
   )
   ```
+- **Action Description Invariant**: Accessibility labels must describe the action performed, never the visual icon name (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
 - **Decorative Images**: Mark decorative illustrations with `excludeFromSemantics: true` to avoid cluttering screen reader announcements:
   ```dart
   Image.asset('assets/images/background_pattern.png', excludeFromSemantics: true)
