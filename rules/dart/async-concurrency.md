@@ -59,4 +59,4 @@ Future<List<Item>> parseHugeJson(String rawJson) async {
   });
 }
 ```
-*Note*: Objects passed into `Isolate.run()` must be sendable (no open file descriptors or complex closures referencing outer state).
+*Note*: Objects passed into `Isolate.run()` must be sendable (no open file descriptors or complex closures referencing outer state). For isolate overhead trade-offs, payload sizing rules, and algorithmic complexity guidelines, see `docs/PERFORMANCE_ENGINEERING_STANDARDS.md` and `skills/performance-engineering/SKILL.md`.

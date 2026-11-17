@@ -38,8 +38,8 @@ graph TD
 
 ### `build(BuildContext context)`
 - Called frequently during rendering and state changes.
-- **Rule**: Must be a **pure function** of state and configuration. Never perform asynchronous operations, start HTTP requests, write to databases, or register persistent listeners inside `build()`.
-- Keep `build()` fast and lightweight to maintain 60/120 FPS.
+- **Rule**: Must be a **pure function** of state and configuration. Never perform asynchronous operations, start HTTP requests, write to databases, sort collections, or register persistent listeners inside `build()`.
+- Keep `build()` fast and lightweight to maintain 60/120 FPS. See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`.
 
 ### `didUpdateWidget(covariant T oldWidget)`
 - Called when the parent widget rebuilds and passes a new widget instance with identical `runtimeType` and `key`.
@@ -47,5 +47,5 @@ graph TD
 
 ### `dispose()`
 - Called when the state object is permanently removed from the element tree.
-- **Rule**: Must clean up every controller, stream subscription, timer, and animation.
+- **Rule**: Must clean up every controller (`TextEditingController`, `AnimationController`, `ScrollController`, `FocusNode`), stream subscription, timer, and animation.
 - **Always call**: `super.dispose()` at the end of the method.
