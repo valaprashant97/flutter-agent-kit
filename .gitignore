@@ -1,0 +1,19 @@
+# Flutter Agent Kit .gitignore
+
+# Test & validation files (kept locally, not pushed to GitHub)
+tests/
+test/
+
+# Coverage & testing artifacts
+coverage/
+*.coverage
+
+# Dart / Flutter build artifacts & local cache
+.dart_tool/
+build/
+*.tmp
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

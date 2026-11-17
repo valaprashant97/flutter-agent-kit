@@ -71,7 +71,6 @@ $docFiles = @(
     "docs\GETTING_STARTED.md",
     "docs\SKILLS_CATALOG.md",
     "docs\WORKFLOWS.md",
-    "docs\MCP_GUIDE.md",
     "docs\AGENT_COMPATIBILITY.md",
     "docs\WINDOWS_DEVELOPMENT.md",
     "docs\FAQ.md"

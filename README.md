@@ -42,7 +42,7 @@ graph TD
     end
     
     subgraph Tooling & Execution
-        Skills --> MCP[Model Context Protocol: Dart DTD, Flutter Inspector, Pub.dev, Figma]
+        Skills --> CLI[Direct CLI Tooling: Flutter, Dart, Git]
         Workflows --> Prompts[19 Standardized Prompts: Canonical 9-Section Context Specification]
         Core --> Validation[5 Automated Quality Suites: PowerShell, Dart Structure, Link & Schema Tests]
     end

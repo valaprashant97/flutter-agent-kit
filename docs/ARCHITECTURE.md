@@ -22,7 +22,6 @@ graph TD
     end
     
     subgraph Operational Integrations
-        Skills --> MCP[Model Context Protocol: Dart DTD, DevTools, Figma]
         Skills --> Templates[Document Templates: PRD, Architecture, Design, Memory, Decisions]
         Workflows --> Prompts[Structured Prompt Library]
     end
@@ -105,7 +104,6 @@ flutter-agent-kit/
 ├── workflows/                  # 24 End-to-end multi-step procedures (inc. performance-audit)
 ├── prompts/                    # 19 Standardized prompts (9-section context specification)
 ├── templates/                  # Standardized project documentation blueprints (PRD, DESIGN, etc.)
-├── mcp/                        # Model Context Protocol configs & guides
 ├── scripts/                    # Automation & validation scripts
 └── docs/                       # Comprehensive documentation (inc. PERFORMANCE_ENGINEERING_STANDARDS.md)
 ```
