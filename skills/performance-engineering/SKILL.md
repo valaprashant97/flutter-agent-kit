@@ -1,6 +1,6 @@
 ---
 name: performance-engineering
-description: Algorithmic efficiency, Big-O complexity analysis, memory leak prevention, Flutter frame rendering optimization, and isolate concurrency.
+description: Algorithmic efficiency, Big-O computational complexity analysis, data structure optimization, memory lifecycle management, and isolate concurrency.
 ---
 
 # performance-engineering
@@ -9,7 +9,7 @@ description: Algorithmic efficiency, Big-O complexity analysis, memory leak prev
 `performance-engineering`
 
 ## 2. Purpose
-Provides end-to-end performance engineering, Big-O computational complexity optimization, memory leak prevention, frame rendering (60/120 FPS) tuning, granular state rebuild scoping, and concurrency management for Flutter and Dart applications.
+Provides end-to-end algorithmic performance engineering, Big-O computational complexity optimization ($O(1)$ lookups, `StringBuffer`, lazy evaluations), memory leak prevention, granular state rebuild scoping, and concurrency management for Flutter and Dart applications. (For runtime DevTools frame profiling and raster jank elimination, use `performance`).
 
 ## 3. When to Use
 - When writing algorithmic routines, search algorithms, data transformations, or collection lookups.
@@ -23,6 +23,7 @@ Provides end-to-end performance engineering, Big-O computational complexity opti
 - Prematurely micro-optimizing small, bounded collections ($n \le 50$) or static screens where readable, simple code already renders in under $1\,\text{ms}$.
 - Refactoring state management architectures solely for performance without empirical profiling proof.
 - Moving trivial tasks ($< 1\,\text{ms}$) into worker isolates where isolate spawning and message copying overhead exceed computation cost.
+- When diagnosing active UI frame jank or GPU shader compilation bottlenecks via DevTools (use `performance` instead).
 
 ## 5. Required Project Context
 - Target Dart functions or Flutter widget source files.
@@ -132,7 +133,7 @@ class UserHeaderView extends StatelessWidget {
 - Verification executed with clean test output.
 
 ## 12. Related Skills
-- `performance`
+- `performance` (Runtime DevTools profiling, 60/120 FPS frame budget enforcement, and raster jank elimination)
 - `dart-best-practices`
 - `flutter-architecture`
 - `ui-implementation`

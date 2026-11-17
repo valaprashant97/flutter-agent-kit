@@ -1,6 +1,6 @@
 ---
 name: performance
-description: Performance profiling, 60/120 FPS jank elimination, memory leak detection, and widget rebuild optimization.
+description: Runtime performance profiling, DevTools tracing, 60/120 FPS jank elimination, raster/UI thread diagnosis, and widget rebuild optimization.
 ---
 
 # performance
@@ -9,15 +9,17 @@ description: Performance profiling, 60/120 FPS jank elimination, memory leak det
 `performance`
 
 ## 2. Purpose
-Provides profiling and optimization workflows for Flutter applications. Eliminates UI thread and GPU raster jank, identifies memory leaks, prevents unnecessary widget rebuilds, optimizes image caching, and offloads heavy computation to worker isolates.
+Provides runtime profiling and UI rendering optimization workflows for Flutter applications. Eliminates UI thread and GPU raster jank, identifies memory leaks, prevents unnecessary widget rebuilds, optimizes image caching, and profiles rendering pipelines using Flutter DevTools. (For algorithmic Big-O complexity analysis, collection pre-indexing, and data structure efficiency, use `performance-engineering`).
 
 ## 3. When to Use
 - When users report UI lag, dropped frames, or slow scrolling.
 - When an app consumes excessive RAM or experiences out-of-memory (OOM) crashes.
 - Prior to production releases to ensure smooth 60 FPS / 120 FPS performance across target devices.
+- When needing runtime DevTools timeline or CPU profiling to measure frame rendering times.
 
 ## 4. When Not to Use
 - Prematurely optimizing simple, static screens that already render in under 2ms.
+- When optimizing algorithmic computational complexity or mathematical data transformations (use `performance-engineering` instead).
 
 ## 5. Required Project Context
 - Target screen code and state controllers
@@ -77,6 +79,7 @@ class CounterDisplay extends StatelessWidget {
 - Static analysis clean with 0 warnings.
 
 ## 12. Related Skills
+- `performance-engineering` (Algorithmic Big-O analysis, collection indexing, and isolate computation)
 - `ui-implementation`
 - `background-execution`
 - `debugging`
