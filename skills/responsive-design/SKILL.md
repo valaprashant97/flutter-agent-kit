@@ -36,6 +36,7 @@ Provides architectures and layout techniques for creating fluid, responsive Flut
 ## 7. Engineering Rules
 - **Prefer `LayoutBuilder` over `MediaQuery.sizeOf`**: Components should adapt to their parent container's allocated width, not the full device window.
 - **Orientation Awareness**: Account for mobile landscape orientation (where height is constrained).
+- **Design Consistency Across Breakpoints**: Regardless of layout adaptation (e.g., bottom bar vs sidebar), all breakpoints must consume the same global design tokens, color palette, typography hierarchy, and corner radii (`docs/DESIGN_SYSTEM_STANDARDS.md`).
 
 ## 8. Code Examples
 ```dart
@@ -124,5 +125,6 @@ class AdaptiveScaffold extends StatelessWidget {
 
 ## 12. Related Skills
 - `ui-implementation`
+- `design-system`
 - `desktop-development`
 - `windows-development`

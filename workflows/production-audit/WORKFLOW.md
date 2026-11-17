@@ -87,5 +87,7 @@ Based on the checklist, issue one of three verdicts:
 - `skills/real-data-integrity/`
 - `skills/security-audit/`
 - `skills/performance/`
+- `skills/performance-engineering/`
 - `docs/REAL_DATA_INTEGRITY.md`
+- `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`
 

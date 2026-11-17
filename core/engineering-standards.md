@@ -194,3 +194,47 @@ final class AuthFailure extends Failure {
 - **Mock Isolation**: Mocks and test fixtures must remain 100% isolated to `test/`. Never import from `test/` into `lib/` and never register mock repositories in production dependency injection.
 - **Specification Reference**: See `docs/REAL_DATA_INTEGRITY.md`, `skills/real-data-integrity/SKILL.md`, and `workflows/real-data-audit/WORKFLOW.md`.
 
+---
+
+## 9. Global Design Consistency & Design System Standard
+
+- **One Coherent Design Language**: Every application must maintain a single, cohesive visual identity. Screen layouts can vary according to function, but buttons, cards, typography, spacing, iconography, and colors must remain consistent.
+- **Design System First Protocol**: Before implementing UI screens, establish or inspect the foundational tokens in `docs/DESIGN.md` across 13 color roles, typography scale, 4pt/8pt modular spacing (`AppSpacing`), corner radii (`AppRadii`), and iconography.
+- **Native Flutter Theming**: Implement systems using `ThemeData`, `ColorScheme`, `TextTheme`, and `ThemeExtension`. Hardcoding raw hex colors (`Color(0xFF...)`) or arbitrary margins inside widget build methods is strictly prohibited.
+- **Reusable Component Architecture**: Maintain and reuse atomic widgets in `lib/core/presentation/widgets/` (`AppButton`, `AppCard`, `AppTextField`, `AppBadge`, `AppEmptyState`, `AppErrorView`, `AppLoadingSkeleton`).
+- **Archetype Alignment**: Choose an intentional design direction (Professional Enterprise, Productivity, Creative, Premium, Friendly, Data-Focused, Minimal Modern) matching the product purpose and audience. Avoid generic AI SaaS aesthetics and gratuitous decoration.
+- **Light & Dark Theme Parity**: Provide 100% color role parity and accessible contrast (WCAG AA $\ge 4.5:1$) in both modes. Never hardcode inverted colors locally.
+- **Mandatory 13-Point Checklist**: Every UI screen must be validated against the 13-point design checklist prior to completion.
+- **Specification Reference**: See `docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/SKILL.md`, and `workflows/design-consistency-audit/WORKFLOW.md`.
+
+---
+
+## 10. Navigation Clarity, Icon Usability & Action Discoverability Standard
+
+- **Clear Purpose & Discoverability**: Every navigation destination, button, and interactive icon must communicate its purpose clearly. Avoid unnecessary icon-only buttons, overcrowded navigation bars, and hidden core actions.
+- **Mobile Navigation Bar Rules**: Keep 3–5 essential primary destinations in mobile `NavigationBar` with readable labels. Move secondary workflows (*Settings*, *Help*, *Export*) into secondary menus or drawers.
+- **Desktop Navigation Adaptation**: Exploit desktop screen geometry using `NavigationRail`, `NavigationDrawer`, or persistent sidebars with full keyboard navigation (`Tab`, `Enter`, `Space`). Never blindly port mobile bottom bars to desktop.
+- **Icon-Only Button Policy**: Standalone `IconButton` widgets are restricted to universally recognizable actions (Search, Back/Close, Settings, Overflow, Play/Pause). Ambiguous or domain-specific actions must use visible text labels (`FilledButton.icon`, `OutlinedButton.icon`) or menu items.
+- **Action-Descriptive Accessibility Semantics**: Every interactive icon must provide a semantic label/tooltip that describes the resulting action (e.g. `"Search transaction history"`), never the icon graphic name (e.g. `"search icon"`).
+- **Action Prioritization & Confirmation**: Classify actions into Primary, Secondary, Contextual, and Destructive. Destructive operations (Delete, Reset, Purge) must have explicit confirmation dialogs and red warning visual treatments.
+- **Mandatory 10-Point Navigation Checklist**: Every navigation flow and UI screen must satisfy the 10-point checklist before completion.
+- **Specification Reference**: See `docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/SKILL.md`, and `workflows/navigation-usability-audit/WORKFLOW.md`.
+
+---
+
+## 11. Advanced Performance Engineering & Algorithmic Efficiency Standard
+
+- **Core Hierarchy**: $\text{Correctness} > \text{Reliability} > \text{Maintainability} > \text{Measured Performance} > \text{Premature Optimization}$. Choose the simplest implementation satisfying performance requirements.
+- **Computational Complexity Invariant**: Analyze Time Complexity and Auxiliary Space Complexity for all algorithmic code. Differentiate auxiliary space from total memory. Pre-index collections with `Map`/`Set` to avoid $O(n^2)$ nested linear searches. Use `StringBuffer` for string loops and lazy `Iterable` evaluations.
+- **Pure Widget Build Methods**: Widget `build()` methods must be pure functions with zero I/O, parsing, sorting, or heavy calculations. Maximize `const` constructor usage. Use `ListView.builder` / `SliverList` for large dynamic collections, and avoid unnecessary intrinsic passes (`IntrinsicHeight`).
+- **Granular State Subscriptions**: Restrict rebuild scopes using architecture-specific granular selectors (`context.select`, `BlocSelector`, `Selector`, `ValueListenableBuilder`). Never migrate state libraries solely for performance without empirical profiling proof.
+- **Resource Lifecycle Management**: Every instantiated controller (`TextEditingController`, `AnimationController`, `ScrollController`, `FocusNode`), stream subscription, timer, and native handle must be disposed in `dispose()`.
+- **Image Memory Constraints**: Constrain decoded image dimensions with `cacheWidth = (displayWidth * devicePixelRatio).round()`.
+- **Concurrency & Isolate Offloading**: Offload heavy CPU work ($> 8\,\text{ms}$) to `Isolate.run()` only when payload size and computation justify message serialization overhead.
+- **Database & Network Optimization**: Index foreign keys and filter columns, eliminate N+1 queries with batching/joins, enforce pagination, and reuse HTTP client connections.
+- **Mandatory 15-Point Performance Checklist**: Every implementation must satisfy the 15-point checklist prior to completion.
+- **Specification Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
+
+
+
+

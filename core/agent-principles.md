@@ -53,3 +53,41 @@ $$\mathbf{Correctness} > \mathbf{Requirement\ Compliance} > \mathbf{Existing\ Co
 - **Isolate Mocks**: Confine test fixtures and mock repositories exclusively to `test/`. Never import test fixtures into `lib/` or register mocks in production dependency injection.
 - **Reference**: See `docs/REAL_DATA_INTEGRITY.md` and `skills/real-data-integrity/SKILL.md`.
 
+---
+
+## 4. The Global Design Consistency Invariant
+
+- **One Coherent Design Language**: Every application must maintain a single, cohesive visual identity. Different screens may serve different purposes, but they must feel like natural parts of the same product.
+- **Design System First**: Before implementing multiple UI screens, inspect or establish the design tokens (colors, typography, 4pt/8pt spacing, corner radii, elevation, iconography) in `docs/DESIGN.md`. Never independently invent new styles on isolated screens.
+- **Native Theming Priority**: Consume Flutter's native theming architecture (`ThemeData`, `ColorScheme`, `TextTheme`, `ThemeExtension`). Hardcoding raw hex colors (`Color(0xFF...)`) or arbitrary paddings inside widget files is strictly prohibited.
+- **Component Reuse Over Duplication**: Inspect `lib/core/presentation/widgets/` for existing buttons, cards, text fields, and feedback views before creating new ones.
+- **Light & Dark Theme Parity**: Every screen must provide accessible contrast (WCAG AA $\ge 4.5:1$) and appropriate surface hierarchy in both Light and Dark themes. Never make light-only or dark-only color assumptions.
+- **Honest Visual Verification**: When visual tooling (screenshot, emulator, or preview) is available, inspect rendered widgets. Never claim visual verification if no visual inspection took place.
+- **Reference**: See `docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/SKILL.md`, and `workflows/design-consistency-audit/WORKFLOW.md`.
+
+---
+
+## 5. The Navigation Clarity & Action Discoverability Invariant
+
+- **Clear Purpose & No Guesswork**: Every navigation destination, button, and interactive icon must communicate its purpose clearly. Users must never have to guess what an icon does or experiment with taps to discover basic functionality.
+- **No Unnecessary Icon-Only Controls**: Ambiguous or domain-specific actions must feature visible text labels (`FilledButton.icon`, `OutlinedButton.icon`) or descriptive menu items. Standalone icon-only buttons are reserved strictly for universal conventions (Search, Close, Back, Settings, More).
+- **The 3–5 Navigation Rule**: Mobile bottom navigation bars (`NavigationBar`) must contain between 3 and 5 essential, frequently used destinations with visible labels. Secondary actions belong in accessible menus or sidebars.
+- **Action-Descriptive Accessibility Semantics**: Every interactive icon must provide an accessibility label/tooltip that describes the resulting action (e.g. `"Search invoice history"`), never the icon graphic name (e.g. `"search icon"`).
+- **Destructive Action Confirmation**: Delete, reset, or purge operations must never be triggered by an unconfirmed ambiguous button. A confirmation modal with explicit warnings is mandatory.
+- **Reference**: See `docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/SKILL.md`, and `workflows/navigation-usability-audit/WORKFLOW.md`.
+
+---
+
+## 6. The Performance Engineering & Algorithmic Efficiency Invariant
+
+- **Priority Hierarchy**: Apply $\text{Correctness} > \text{Reliability} > \text{Maintainability} > \text{Measured Performance} > \text{Premature Optimization}$. Select the simplest implementation that satisfies performance budgets. Never micro-optimize small bounded collections ($n \le 50$) at the expense of readability.
+- **Big-O Complexity & Data Structures**: Understand Time Complexity and Auxiliary Space Complexity (strictly distinguishing temporary working memory from input/output storage). Use `Map` and `Set` for repeated lookups, `StringBuffer` inside loops, and single-pass lazy `Iterable` evaluations. Never promise $O(1)$ when unachievable.
+- **Pure Build Methods & Scoped Rebuilds**: Keep Flutter widget `build()` methods pure, predictable, and free of I/O, sorting, or heavy math. Maximize `const` constructor usage. Use granular selectors (`select()`, `BlocSelector`, `ValueListenableBuilder`) to isolate rebuilds.
+- **Resource Lifecycle Hygiene**: Explicitly dispose all owned controllers (`TextEditingController`, `AnimationController`, `ScrollController`, `FocusNode`), timers, and stream subscriptions in `dispose()`. Constrain image memory with `cacheWidth` and `cacheHeight` factoring in the device pixel ratio.
+- **Isolate Offloading**: Keep CPU-intensive work off the UI isolate via `Isolate.run()` only when payload and compute duration ($> 8\,\text{ms}$) justify serialization overhead.
+- **Proof-of-Performance**: Profile in profile/release mode using DevTools. Never claim 60/120 FPS without measurement. Include a standardized **Performance Analysis** block (Time, Auxiliary Space, considerations, bottlenecks) for algorithmic and meaningful code.
+- **Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
+
+
+
+

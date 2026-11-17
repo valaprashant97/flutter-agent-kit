@@ -1,10 +1,10 @@
 # Flutter Agent Kit: Skills Catalog
 
-This catalog provides a comprehensive index of all 31 specialized skills included in the **Flutter Agent Kit**. Each skill is packaged in a self-contained directory under `skills/<skill-name>/` and adheres strictly to the open Agent Skills specification with YAML frontmatter and the 12 canonical sections.
+This catalog provides a comprehensive index of all 34 specialized skills included in the **Flutter Agent Kit**. Each skill is packaged in a self-contained directory under `skills/<skill-name>/` and adheres strictly to the open Agent Skills specification with YAML frontmatter and the 12 canonical sections.
 
 ---
 
-## Skills Index & Matrix (32 Production Skills)
+## Skills Index & Matrix (34 Production Skills)
 
 | Category | Skill Directory | Primary Trigger & Purpose |
 | :--- | :--- | :--- |
@@ -12,12 +12,13 @@ This catalog provides a comprehensive index of all 31 specialized skills include
 | **Architecture** | [`flutter-architecture`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/flutter-architecture/SKILL.md) | Layered Clean Architecture, feature-first modularization, service layer |
 | **Dart Engineering** | [`dart-best-practices`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/dart-best-practices/SKILL.md) | Idiomatic Dart 3.x, patterns, records, sealed types, concurrency |
 | **UI Engineering** | [`ui-implementation`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/ui-implementation/SKILL.md) | Production widget composition, micro-interactions, layouts, loading skeletons |
-| **Design System** | [`design-system`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/design-system/SKILL.md) | Material 3, typography scale, semantic tokens, `ThemeExtension` |
+| **Design System** | [`design-system`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/design-system/SKILL.md) | Global design consistency, 13 color roles, modular spacing, 13-point design checklist, `ThemeExtension` |
 | **Animations** | [`animations`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/animations/SKILL.md) | Design, implement, and optimize 60/120fps implicit, explicit, staggered, and physics animations |
 | **Custom Graphics** | [`custom-painter`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/custom-painter/SKILL.md) | High-performance 2D drawing, charting, dials, and custom canvas effects |
 | **Responsive UI** | [`responsive-design`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/responsive-design/SKILL.md) | Breakpoints, `LayoutBuilder`, multi-pane master-detail desktop layouts |
 | **State Management**| [`state-management`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/state-management/SKILL.md) | BLoC, Riverpod, Provider, ValueNotifier selection & refactoring |
 | **Navigation** | [`navigation`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/navigation/SKILL.md) | Declarative routing with `go_router`, deep links, authentication guards |
+| **Navigation UX** | [`navigation-clarity`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/navigation-clarity/SKILL.md) | Navigation clarity, icon usability, action discoverability, a11y labels |
 | **Data Persistence**| [`database-integration`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/database-integration/SKILL.md) | Drift (SQLite), Hive, Isar, schema migrations, and relational integrity |
 | **Networking** | [`api-integration`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/api-integration/SKILL.md) | Dio & HTTP clients, auto-retries, caching interceptors, error handling |
 | **Error Handling** | [`error-handling`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/error-handling/SKILL.md) | Dual global hooks, typed sealed failures, fallback UI, exponential retries |
@@ -35,6 +36,7 @@ This catalog provides a comprehensive index of all 31 specialized skills include
 | **Code Hygiene** | [`code-review`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/code-review/SKILL.md) | Production code review with severity triage: Critical, High, Medium, Low |
 | **Security Audit** | [`security-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/security-audit/SKILL.md) | Vulnerability assessment, secret scanning, reverse engineering hardening |
 | **Performance** | [`performance`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/performance/SKILL.md) | 60/120 FPS jank elimination, memory leak profiling, repainting isolation |
+| **Algorithmic Efficiency** | [`performance-engineering`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/performance-engineering/SKILL.md) | Algorithmic efficiency, Big-O complexity, memory lifecycle, rebuild scoping, isolate offloading |
 | **A11y** | [`accessibility`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/accessibility/SKILL.md) | Semantics trees, screen readers, accessible contrast, touch target sizes |
 | **i18n** | [`localization`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/localization/SKILL.md) | Flutter gen-l10n, ARB translation management, locale switching |
 | **Build & Release** | [`packaging`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/packaging/SKILL.md) | Release build optimization, code obfuscation, symbol splitting |

@@ -7,7 +7,7 @@ You are acting as a Senior Full-Stack Flutter Engineer guided by the **Flutter A
 ## 1. PROJECT CONTEXT
 - **Feature Name / Task ID**: [TASK_ID / FEATURE_NAME]
 - **Target Feature Scope**: [SHORT DESCRIPTION OF FEATURE GOALS]
-- **Project Guidelines**: `docs/PRD.md`, `docs/ARCHITECTURE.md`, `docs/DESIGN.md`, and `core/engineering-standards.md`
+- **Project Guidelines**: `docs/PRD.md`, `docs/ARCHITECTURE.md`, `docs/DESIGN.md`, `docs/DESIGN_SYSTEM_STANDARDS.md`, and `core/engineering-standards.md`
 
 ---
 
@@ -30,6 +30,7 @@ Implement the specified feature as a complete, vertical slice (Domain $\rightarr
 
 ## 5. CONSTRAINTS
 - Real data only: Never introduce fake sample records, static lists, or fabricated metrics. Connect UI to real database/API streams. Empty states must render honest empty UI with a call-to-action button (`docs/REAL_DATA_INTEGRITY.md`).
+- Global design consistency: Adhere to established design tokens (`Theme.of(context)`, `AppSpacing`); reuse existing components in `lib/core/presentation/widgets/`; verify against the 13-point design checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
 - Respect existing architecture (e.g. BLoC, Riverpod, Provider, or MVVM).
 - Touch only files directly related to this vertical slice (`core/change-discipline.md`).
 - BuildContext safety invariant: Always verify `if (!context.mounted) return;` after async operations.
@@ -42,7 +43,8 @@ Implement the specified feature as a complete, vertical slice (Domain $\rightarr
 - [ ] Domain models and entity contracts implemented with sound null safety.
 - [ ] Data sources and repository methods return strongly typed `Result<T, Failure>`.
 - [ ] State controller handles state transitions and disposes resources cleanly.
-- [ ] UI screen renders all states, uses design system tokens, and avoids layout overflows.
+- [ ] UI screen renders all states, uses design system tokens, reuses shared components, and avoids layout overflows.
+- [ ] 13-point design checklist satisfied.
 - [ ] `flutter analyze` passes with 0 warnings and 0 errors.
 
 ---

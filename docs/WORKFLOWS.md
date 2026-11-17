@@ -1,10 +1,10 @@
 # Flutter Agent Kit: Lifecycle Workflows Guide
 
-This guide details the 20 end-to-end engineering workflows supported by the **Flutter Agent Kit**. Each workflow represents a rigorous protocol with defined entry conditions, sequential phases, quality gates, and completion criteria.
+This guide details the 24 end-to-end engineering workflows supported by the **Flutter Agent Kit**. Each workflow represents a rigorous protocol with defined entry conditions, sequential phases, quality gates, and completion criteria.
 
 ---
 
-## Complete Engineering Lifecycle Overview (21 Workflows)
+## Complete Engineering Lifecycle Overview (24 Workflows)
 
 ```mermaid
 flowchart TD
@@ -23,11 +23,17 @@ flowchart TD
     WF2 --> WF11[11. Refactoring]
     WF2 --> WF12[12. Bug Investigation]
     WF2 --> WF13[13. Real Data Audit]
+    WF2 --> WF22[22. Design Consistency Audit]
+    WF2 --> WF23[23. Navigation Usability Audit]
+    WF2 --> WF24[24. Performance Audit]
 
     WF12 --> WF14[14. Root Cause Analysis]
     WF14 --> WF15[15. Bug Fixing]
     WF15 --> WF17[17. Testing & QA]
     WF13 --> WF17
+    WF22 --> WF17
+    WF23 --> WF17
+    WF24 --> WF17
 
     WF9 --> WF16[16. Windows Desktop Lifecycle]
     WF10 --> WF17
@@ -68,6 +74,9 @@ flowchart TD
 | **19** | [`performance-review`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-review/WORKFLOW.md) | Frame rate profiling, memory leak detection, isolate offloading, and jank fix |
 | **20** | [`release-preparation`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/release-preparation/WORKFLOW.md) | Version bumping, code signing, obfuscated compilation, and MSIX/AAB packaging |
 | **21** | [`production-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/production-audit/WORKFLOW.md) | 50-point pre-flight launch audit and formal deployment readiness certification |
+| **22** | [`design-consistency-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/design-consistency-audit/WORKFLOW.md) | Audits, detects, and harmonizes design drift, hardcoded styling, and theme contrast |
+| **23** | [`navigation-usability-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/navigation-usability-audit/WORKFLOW.md) | Audits icon clarity, action discoverability, a11y labels, and nav hierarchy |
+| **24** | [`performance-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-audit/WORKFLOW.md) | Audits algorithmic complexity, memory lifecycles, rebuild scopes, and isolate concurrency |
 
 ---
 

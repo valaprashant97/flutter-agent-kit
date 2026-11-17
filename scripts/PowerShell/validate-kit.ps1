@@ -64,6 +64,9 @@ $docFiles = @(
     "docs\AGENT_KIT_AUDIT.md",
     "docs\EXTERNAL_RESEARCH.md",
     "docs\REAL_DATA_INTEGRITY.md",
+    "docs\DESIGN_SYSTEM_STANDARDS.md",
+    "docs\NAVIGATION_AND_ICON_STANDARDS.md",
+    "docs\PERFORMANCE_ENGINEERING_STANDARDS.md",
     "docs\ARCHITECTURE.md",
     "docs\GETTING_STARTED.md",
     "docs\SKILLS_CATALOG.md",
@@ -77,13 +80,13 @@ foreach ($file in $docFiles) {
     Assert-FileExists $file "Documentation"
 }
 
-Write-Host "`n--- 4. Checking Skills Manifests & YAML Frontmatter (32 Skills) ---" -ForegroundColor Yellow
+Write-Host "`n--- 4. Checking Skills Manifests & YAML Frontmatter (34 Skills) ---" -ForegroundColor Yellow
 $skillsDir = Join-Path $rootDir "skills"
 $skills = Get-ChildItem -Path $skillsDir -Directory
 Write-Host "Found $($skills.Count) skills in $skillsDir"
 
-if ($skills.Count -lt 32) {
-    Write-Host " [FAIL] Expected at least 32 skills, but found $($skills.Count)" -ForegroundColor Red
+if ($skills.Count -lt 34) {
+    Write-Host " [FAIL] Expected at least 34 skills, but found $($skills.Count)" -ForegroundColor Red
     $script:failures++
 }
 
@@ -112,13 +115,13 @@ foreach ($skill in $skills) {
     }
 }
 
-Write-Host "`n--- 5. Checking Lifecycle Workflows (21 Workflows) ---" -ForegroundColor Yellow
+Write-Host "`n--- 5. Checking Lifecycle Workflows (24 Workflows) ---" -ForegroundColor Yellow
 $workflowsDir = Join-Path $rootDir "workflows"
 $workflows = Get-ChildItem -Path $workflowsDir -Directory
 Write-Host "Found $($workflows.Count) workflows in $workflowsDir"
 
-if ($workflows.Count -lt 21) {
-    Write-Host " [FAIL] Expected at least 21 workflows, but found $($workflows.Count)" -ForegroundColor Red
+if ($workflows.Count -lt 24) {
+    Write-Host " [FAIL] Expected at least 24 workflows, but found $($workflows.Count)" -ForegroundColor Red
     $script:failures++
 }
 

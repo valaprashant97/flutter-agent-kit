@@ -28,7 +28,9 @@ Provides a senior engineering review protocol for Flutter codebases. Evaluates p
 2. **Evaluate Architecture Compliance**: Verify whether dependencies point in the correct direction (Presentation → Domain ← Data).
 3. **Audit Lifecycle & Memory Safety**: Check that all controllers, streams, and animations are cleanly disposed in `dispose()`.
 4. **Audit BuildContext Safety**: Verify that no `BuildContext` is accessed after an `await` without `if (!context.mounted) return;`.
-5. **Inspect Performance & Const Usage**: Check for unnecessary widget rebuilds, missing `const` constructors, and heavy computation in `build()`.
+5. **Inspect Performance & Algorithmic Complexity**:
+   - Provide the mandatory 4-line `**Performance Analysis**` block (Time, Auxiliary Space, considerations, bottlenecks) for newly generated or reviewed algorithmic routines (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
+   - Check for pure build methods, const subtrees, lazy viewport lists, and resource disposal in `dispose()`.
 6. **Classify Findings by Severity**:
    - **Critical (Blocker)**: Crashes, memory leaks, security vulnerabilities, secret leaks.
    - **High (Bug / Defect)**: Logic errors, missing error states, broken edge cases.
@@ -39,6 +41,7 @@ Provides a senior engineering review protocol for Flutter codebases. Evaluates p
 - **No Style Nitpicking on Unrelated Code**: Limit feedback strictly to the diff. Do not complain about preexisting styles in untouched files.
 - **Actionable Suggestions**: For every issue raised, provide the exact code replacement or refactoring snippet.
 - **Zero-Tolerance for False Passes**: If an issue breaks compilation or introduces a crash, flag it as Critical immediately.
+- **Complexity Assessment Invariant**: Include the standard `**Performance Analysis**` block for meaningful algorithmic code blocks.
 
 ## 8. Code Examples
 ```text
@@ -68,6 +71,8 @@ Navigator.of(context).pushReplacementNamed('/dashboard');
 - Clear, actionable code fixes provided for all identified issues.
 
 ## 12. Related Skills
+- `navigation-clarity`
+- `performance-engineering`
 - `security-audit`
 - `performance`
 - `testing`

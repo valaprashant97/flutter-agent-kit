@@ -114,3 +114,44 @@ This document tracks the phased audit, research, fixes, and production upgrades 
 - [x] Update validation suite (`scripts/PowerShell/validate-kit.ps1`: 94 files checked, 0 failures)
 - [x] Status: **Completed**
 
+### Phase 16: Global Design Consistency & Design System Enforcement
+- [x] Create comprehensive standard: `docs/DESIGN_SYSTEM_STANDARDS.md` (One Coherent Visual Identity, 12-step Design System First protocol, 13 color roles, 4pt/8pt modular spacing grid, 7 design archetypes, 13-point design checklist, brownfield severity matrix)
+- [x] Upgrade dedicated agent skill: `skills/design-system/SKILL.md` (12 canonical sections, YAML frontmatter, archetypes, review checklist)
+- [x] Create dedicated audit workflow: `workflows/design-consistency-audit/WORKFLOW.md` (5-phase audit protocol for design drift detection and tokenization) (Total: 22 Workflows)
+- [x] Create reusable prompt: `prompts/ui-ux/design-consistency-audit.md` (Canonical 9-section context specification) (Total: 17 Prompts)
+- [x] Expand `templates/DESIGN.md` into comprehensive design system specification blueprint
+- [x] Embed Global Design Consistency Invariant in `core/agent-principles.md` and `core/engineering-standards.md`
+- [x] Align all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`)
+- [x] Upgrade existing skills: `ui-implementation`, `responsive-design`
+- [x] Upgrade existing workflows: `design-system`, `ui-redesign`, `feature-development`
+- [x] Upgrade existing prompts: `design-prompt.md`, `feature-prompt.md`
+- [x] Synchronize `docs/SKILLS_CATALOG.md` (32 skills), `docs/WORKFLOWS.md` (22 workflows), and `docs/ARCHITECTURE.md`
+- [x] Update validation suite (`scripts/PowerShell/validate-kit.ps1`: 95+ files checked, 0 failures)
+- [x] Status: **Completed**
+
+### Phase 17: Navigation Clarity, Icon Usability & Action Discoverability System
+- [x] Create comprehensive standard: `docs/NAVIGATION_AND_ICON_STANDARDS.md` (3–5 destination rule, universal vs domain icon policy, action-descriptive a11y labels, 4-tier action hierarchy, 10-point navigation checklist)
+- [x] Create dedicated agent skill: `skills/navigation-clarity/SKILL.md` (12 canonical sections, YAML frontmatter) (Total: 33 Skills)
+- [x] Create dedicated audit workflow: `workflows/navigation-usability-audit/WORKFLOW.md` (5-phase audit protocol for icon clarity and action discoverability) (Total: 23 Workflows)
+- [x] Create reusable prompt: `prompts/ui-ux/navigation-icon-audit.md` (Canonical 9-section context specification) (Total: 18 Prompts)
+- [x] Embed Navigation Clarity Invariant in `core/agent-principles.md` and `core/engineering-standards.md`
+- [x] Align all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`)
+- [x] Upgrade domain rules and skills: `skills/navigation/`, `skills/accessibility/`, `rules/ui-ux/accessibility.md`, `skills/code-review/`
+- [x] Synchronize catalogs and architecture docs (`docs/SKILLS_CATALOG.md`, `docs/WORKFLOWS.md`, `docs/ARCHITECTURE.md`, `README.md`)
+- [x] Update validation suites (`scripts/PowerShell/validate-kit.ps1`: 99 files checked, `tests/AGENT_KIT_VALIDATION.md`)
+- [x] Status: **Completed**
+
+### Phase 18: Advanced Dart & Flutter Performance Engineering System
+- [x] Create comprehensive standard: `docs/PERFORMANCE_ENGINEERING_STANDARDS.md` (Decision hierarchy, Big-O analysis, data structures, pure build methods, const constructors, granular state rebuilds, resource disposal in `dispose()`, image caching with DPR, isolate concurrency, DevTools profiling, 15-point checklist)
+- [x] Create dedicated agent skill: `skills/performance-engineering/SKILL.md` (12 canonical sections, YAML frontmatter) (Total: 34 Skills)
+- [x] Create dedicated audit workflow: `workflows/performance-audit/WORKFLOW.md` (5-phase audit protocol for algorithmic efficiency, memory leaks, and isolate concurrency) (Total: 24 Workflows)
+- [x] Create reusable prompt: `prompts/performance/algorithmic-efficiency-review.md` (Canonical 9-section context specification) (Total: 19 Prompts)
+- [x] Embed Performance Engineering Invariant in `core/agent-principles.md` and `core/engineering-standards.md`
+- [x] Align all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`)
+- [x] Upgrade domain rules and skills: `rules/dart/async-concurrency.md`, `rules/flutter/widget-lifecycle.md`, `skills/code-review/SKILL.md`, `workflows/feature-development/WORKFLOW.md`, `workflows/production-audit/WORKFLOW.md`
+- [x] Synchronize catalogs and architecture docs (`docs/SKILLS_CATALOG.md`, `docs/WORKFLOWS.md`, `docs/ARCHITECTURE.md`, `README.md`)
+- [x] Update validation suites (`scripts/PowerShell/validate-kit.ps1`: 102 files checked, `tests/AGENT_KIT_VALIDATION.md`)
+- [x] Status: **Completed**
+
+
+

@@ -20,7 +20,11 @@ The **Flutter Agent Kit** transforms AI agents into disciplined, experienced Flu
 3. **Sound Engineering Standards**: Modern Dart 3.x patterns, sound null safety, and clean separation of concerns (`core/engineering-standards.md`).
 4. **Production Error Handling**: Dual global error interception (`FlutterError.onError` + `PlatformDispatcher.onError`), typed sealed failures, fallback UI, and safe exponential retries with jitter.
 5. **First-Class Windows Desktop Support**: Native Win32 single-instance mutex, Per-Monitor V2 DPI awareness, system tray integration, window management, Toast notifications, registry autostart, and signed MSIX packaging.
-6. **Deterministic Proof of Work**: A strict verification policy requiring real CLI checks (`flutter analyze`, `flutter test`) with zero fabricated passes (`core/verification-policy.md`).
+6. **Zero Dummy Data & Real Data Integrity**: Enforcing dynamic reactive data pipelines, honest empty states, real calculated metrics, and isolated mocks (`docs/REAL_DATA_INTEGRITY.md`).
+7. **Global Design Consistency**: Enforcing one coherent visual identity across all screens, 13 canonical color roles, 4pt/8pt modular spacing, reusable component libraries, and the 13-point design checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
+8. **Navigation Clarity & Action Discoverability**: Enforcing 3–5 mobile bottom nav destinations with visible labels, recognizable icons, action-descriptive a11y labels, and destructive action confirmation (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
+9. **Advanced Performance Engineering**: Algorithmic complexity analysis ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
+10. **Deterministic Proof of Work**: A strict verification policy requiring real CLI checks (`flutter analyze`, `flutter test`) with zero fabricated passes (`core/verification-policy.md`).
 
 ---
 
@@ -33,13 +37,13 @@ graph TD
     
     subgraph Operational Foundations
         Core --> Rules[45+ Domain Rules: Dart, Flutter, State, Database, Error Handling, Security, Platforms]
-        Core --> Skills[32 Specialized Skills: 12 Canonical Sections + YAML Frontmatter]
-        Core --> Workflows[21 Lifecycle Workflows: From Idea to Production Launch]
+        Core --> Skills[34 Specialized Skills: 12 Canonical Sections + YAML Frontmatter]
+        Core --> Workflows[24 Lifecycle Workflows: From Idea to Production Launch]
     end
     
     subgraph Tooling & Execution
         Skills --> MCP[Model Context Protocol: Dart DTD, Flutter Inspector, Pub.dev, Figma]
-        Workflows --> Prompts[16 Standardized Prompts: Canonical 9-Section Context Specification]
+        Workflows --> Prompts[19 Standardized Prompts: Canonical 9-Section Context Specification]
         Core --> Validation[5 Automated Quality Suites: PowerShell, Dart Structure, Link & Schema Tests]
     end
 ```
@@ -57,19 +61,19 @@ graph TD
 - `change-discipline.md`: Surgical edits, vertical slices, and zero collateral refactoring.
 - `verification-policy.md`: Proof-of-work protocols, real test execution, and zero fake passes.
 
-### 2. Specialized Skills System (32 Skills in `skills/`)
+### 2. Specialized Skills System (34 Skills in `skills/`)
 Each skill follows the open Agent Skills format with YAML frontmatter and 12 canonical sections:
 - **Discovery & Architecture**: `project-analysis`, `flutter-architecture`, `dart-best-practices`.
 - **UI & Graphics**: `ui-implementation`, `design-system`, `animations`, `custom-painter`, `responsive-design`.
-- **State & Routing**: `state-management`, `navigation`.
+- **State & Routing**: `state-management`, `navigation`, `navigation-clarity`.
 - **Data & Networking**: `database-integration`, `api-integration`, `error-handling`, `real-data-integrity`.
 - **Platform & Systems**: `authentication`, `notifications`, `background-execution`, `file-system`, `desktop-development`, `windows-development`, `platform-channels`.
-- **Quality & Verification**: `debugging`, `testing`, `golden-testing`, `code-review`, `security-audit`, `performance`, `accessibility`, `localization`.
+- **Quality & Verification**: `debugging`, `testing`, `golden-testing`, `code-review`, `security-audit`, `performance`, `performance-engineering`, `accessibility`, `localization`.
 - **Release & Certification**: `packaging`, `msix-release`, `production-readiness`.
 
 *See [docs/SKILLS_CATALOG.md](docs/SKILLS_CATALOG.md) for the complete directory.*
 
-### 3. Lifecycle Workflows (21 Workflows in `workflows/`)
+### 3. Lifecycle Workflows (24 Workflows in `workflows/`)
 Complete engineering protocols from product discovery to production release:
 1. `new-project`: Concept to runnable baseline.
 2. `existing-project-analysis`: Deep brownfield codebase analysis.
@@ -92,11 +96,14 @@ Complete engineering protocols from product discovery to production release:
 19. `performance-review`: 60/120 FPS profiling and isolate offloading.
 20. `release-preparation`: Obfuscated builds, signing, and packaging.
 21. `production-audit`: 50-point pre-flight launch certification.
+22. `design-consistency-audit`: Design drift detection, tokenization, and visual cohesion audit.
+23. `navigation-usability-audit`: Icon clarity, action discoverability, a11y labels, and nav hierarchy audit.
+24. `performance-audit`: Algorithmic complexity, memory lifecycle, rebuild scopes, and isolate concurrency audit.
 
 *See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for the complete guide.*
 
 ### 4. Standardized 9-Section Prompts Library (`prompts/`)
-All 16 prompts across 10 categories enforce the canonical 9-section context specification:
+All 19 prompts across 10 categories enforce the canonical 9-section context specification:
 `PROJECT CONTEXT` | `OBJECTIVE` | `EXISTING BEHAVIOR` | `REQUIRED INVESTIGATION` | `CONSTRAINTS` | `ACCEPTANCE CRITERIA` | `EDGE CASES` | `TESTING REQUIREMENTS` | `EXPECTED OUTPUT`.
 
 ---
@@ -122,7 +129,7 @@ The Flutter Agent Kit provides enterprise-grade Windows desktop capabilities:
 The kit includes an automated validation suite that verifies all skill manifests, YAML frontmatter, directory structures, and markdown link integrity:
 
 ```powershell
-# 1. PowerShell Master Validator (91 files checked)
+# 1. PowerShell Master Validator (102 files checked)
 powershell -ExecutionPolicy Bypass -File scripts\PowerShell\validate-kit.ps1
 
 # 2. Dart Structure & Manifest Integrity Validator

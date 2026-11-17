@@ -35,5 +35,8 @@ Guidelines for Claude Code CLI operating in Flutter and Dart codebases under the
 - **Unified Error Handling**: Enforce dual global handlers (`FlutterError.onError`, `PlatformDispatcher.onError`) and typed sealed failures (`rules/error-handling/`).
 - **BuildContext Safety**: Always verify `if (!context.mounted) return;` after `await` before using `context`.
 - **UI States & Real Data Only**: Every asynchronous UI widget must handle Loading, Success, Empty, and Error states honestly. Never insert fake dummy records or fabricated metrics (`docs/REAL_DATA_INTEGRITY.md`).
+- **Global Design Consistency**: Maintain one coherent visual identity across all screens. Use global design tokens, 4pt/8pt spacing, and reusable components. Satisfy the 13-point design checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
+- **Navigation Clarity & Discoverability**: Keep 3–5 mobile bottom nav destinations with visible labels. Avoid ambiguous icon-only buttons; provide action-descriptive accessibility labels and require confirmation for destructive actions (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
+- **Performance Engineering & Efficiency**: Enforce algorithmic efficiency ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal in `dispose()`, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
 - **Windows Lifecycle**: Differentiate window minimization to tray from process termination; enforce single-instance mutex and Per-Monitor V2 DPI awareness.
-- **Skills & Workflows**: Consult `docs/SKILLS_CATALOG.md` (32 skills) and `docs/WORKFLOWS.md` (21 workflows).
+- **Skills & Workflows**: Consult `docs/SKILLS_CATALOG.md` (34 skills) and `docs/WORKFLOWS.md` (24 workflows).
