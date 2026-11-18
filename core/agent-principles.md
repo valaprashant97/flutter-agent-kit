@@ -88,6 +88,15 @@ $$\mathbf{Correctness} > \mathbf{Requirement\ Compliance} > \mathbf{Existing\ Co
 - **Proof-of-Performance**: Profile in profile/release mode using DevTools. Never claim 60/120 FPS without measurement. Include a standardized **Performance Analysis** block (Time, Auxiliary Space, considerations, bottlenecks) for algorithmic and meaningful code.
 - **Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
 
+---
 
+## 7. The Mandatory 15-Phase SDLC & Task Management Invariant
 
-
+- **Default 15-Phase Development Lifecycle**: The 15-phase SDLC ($\text{Idea \& Research} \to \text{PRD \& Requirements} \to \text{User Flow} \to \text{Wireframe \& UI/UX} \to \text{Design System} \to \text{Technical Architecture} \to \text{Database \& API Design} \to \text{Task Breakdown} \to \text{Project Setup} \to \text{Development} \to \text{Integration} \to \text{Testing \& QA} \to \text{Security \& Optimization} \to \text{Deployment} \to \text{Monitoring \& Maintenance}$) is the **DEFAULT** development workflow for all new software projects and major product development tasks.
+- **Never Implement Large Projects in One Operation**: Never attempt to complete a complex software project in one massive operation. Large or complex requirements must be systematically planned across phases and decomposed into independent, atomic tasks in `tasks/TASKS.md` using the 13-field schema before writing code.
+- **Sequential Task Execution Loop**: In Phase 10 (Development), execute strictly one task at a time following the loop: $\text{READ} \to \text{UNDERSTAND} \to \text{PLAN} \to \text{IMPLEMENT} \to \text{TEST} \to \text{REVIEW} \to \text{FIX} \to \text{DOCUMENT} \to \text{VERIFY} \to \text{MARK COMPLETED}$. Never move to dependent tasks before completing their prerequisites.
+- **In-Project Documentation Only**: All AI-generated project planning, architecture, user flows, wireframes, and task registries must reside inside `docs/` and `tasks/` in the target project root. Never create global or temporary project documentation.
+- **Mandatory GitHub Protection**: Private AI-generated planning documents (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) must be excluded from public Git remotes via `.gitignore`. Public docs (`README.md`, `LICENSE`, `CHANGELOG.md`) remain tracked.
+- **12-Point Task Completion Verification**: A task is marked `Completed` only after passing the 12-point checklist, with real test execution and static analysis cleanly passing.
+- **Failed Task Recovery Protocol**: If tests fail, stop immediately, diagnose the actual root cause, apply the smallest safe fix, and retest. Never suppress errors or fake passing tests.
+- **Reference**: See `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.

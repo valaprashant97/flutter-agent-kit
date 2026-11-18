@@ -235,3 +235,18 @@ final class AuthFailure extends Failure {
 - **Mandatory 15-Point Performance Checklist**: Every implementation must satisfy the 15-point checklist prior to completion.
 - **Specification Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
 
+---
+
+## 12. Mandatory 15-Phase SDLC & Task Management Standard
+
+- **Default 15-Phase Development Lifecycle**: The 15-phase SDLC ($\text{Idea \& Research} \to \text{PRD \& Requirements} \to \text{User Flow} \to \text{Wireframe \& UI/UX} \to \text{Design System} \to \text{Technical Architecture} \to \text{Database \& API Design} \to \text{Task Breakdown} \to \text{Project Setup} \to \text{Development} \to \text{Integration} \to \text{Testing \& QA} \to \text{Security \& Optimization} \to \text{Deployment} \to \text{Monitoring \& Maintenance}$) is the **DEFAULT** development workflow for all new software projects and major product development tasks.
+- **Sequential Task Execution Loop**: In Phase 10 (Development), work strictly sequentially on one implementation task at a time following the loop: $\text{READ} \to \text{UNDERSTAND} \to \text{PLAN} \to \text{IMPLEMENT} \to \text{TEST} \to \text{REVIEW} \to \text{FIX} \to \text{DOCUMENT} \to \text{VERIFY} \to \text{MARK COMPLETED}$. Never move to dependent tasks before completing their prerequisites.
+- **Large Task Breakdown Hierarchy**: Decompose large requirements into Project $\to$ Modules $\to$ Features $\to$ Sub-features $\to$ Development Phases $\to$ Tasks $\to$ Testing Tasks. Every task must be sized for independent execution and define the 13 mandatory schema fields (ID, title, description, objective, requirements, affected files, dependencies, steps, acceptance criteria, testing requirements, expected outcome, priority, status).
+- **Proportional Scope Execution**: Small tasks (1-file fixes) execute Phase 10 directly with targeted test verification. Medium tasks (single module) execute Phases 02, 06, 08, 10, 12. Greenfield/large projects execute all 15 phases sequentially.
+- **Brownfield Discovery Workflow**: For existing projects, analyze current code, identify already completed phases, inspect existing docs, determine active phase, and resume without recreating completed work.
+- **Automatic In-Project Documentation**: All AI-generated project documents (`PROJECT_OVERVIEW.md`, `RESEARCH.md`, `PRD.md`, `TRD.md`, `USER_FLOW.md`, `SCREEN_LIST.md`, `WIREFRAME.md`, `UI_UX_SPECIFICATION.md`, `DESIGN.md`, `ARCHITECTURE.md`, `TECH_STACK.md`, `DATABASE.md`, `API.md`, `TEST_PLAN.md`, `SECURITY.md`, `DECISIONS.md`, `MEMORY.md`, `CHANGELOG.md`, `TASKS.md`, `IMPLEMENTATION_PLAN.md`) must reside inside `docs/` and `tasks/` in the project root. Never create global or temporary project documentation.
+- **Mandatory GitHub Protection**: Private AI planning documentation and task registries must be excluded from public Git remotes via `.gitignore` (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`, etc.). Keep public docs (`README.md`, `LICENSE`, `CHANGELOG.md`, `AGENTS.md`) tracked.
+- **Phase Completion Gates & Verification**: A phase must never be marked completed without verifying all required deliverables. A task is marked `Completed` only after passing the 12-Point Task Completion Verification Checklist.
+- **Failed Task Recovery Protocol**: If tests fail, execute root-cause isolation, apply the smallest safe fix, retest, and verify zero regressions. Never fake passing results.
+- **Specification Reference**: See `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.
+

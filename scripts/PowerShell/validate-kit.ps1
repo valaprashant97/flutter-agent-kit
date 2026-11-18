@@ -75,19 +75,20 @@ $docFiles = @(
     "docs\WINDOWS_DEVELOPMENT.md",
     "docs\FAQ.md",
     "docs\SKILL_SYSTEM_AUDIT.md",
-    "docs\FINAL_QUALITY_AUDIT.md"
+    "docs\FINAL_QUALITY_AUDIT.md",
+    "docs\TASK_MANAGEMENT_STANDARDS.md"
 )
 foreach ($file in $docFiles) {
     Assert-FileExists $file "Documentation"
 }
 
-Write-Host "`n--- 4. Checking Skills Manifests & YAML Frontmatter (34 Skills) ---" -ForegroundColor Yellow
+Write-Host "`n--- 4. Checking Skills Manifests & YAML Frontmatter (35 Skills) ---" -ForegroundColor Yellow
 $skillsDir = Join-Path $rootDir "skills"
 $skills = Get-ChildItem -Path $skillsDir -Directory
 Write-Host "Found $($skills.Count) skills in $skillsDir"
 
-if ($skills.Count -lt 34) {
-    Write-Host " [FAIL] Expected at least 34 skills, but found $($skills.Count)" -ForegroundColor Red
+if ($skills.Count -lt 35) {
+    Write-Host " [FAIL] Expected at least 35 skills, but found $($skills.Count)" -ForegroundColor Red
     $script:failures++
 }
 
@@ -116,13 +117,13 @@ foreach ($skill in $skills) {
     }
 }
 
-Write-Host "`n--- 5. Checking Lifecycle Workflows (24 Workflows) ---" -ForegroundColor Yellow
+Write-Host "`n--- 5. Checking Lifecycle Workflows (25 Workflows) ---" -ForegroundColor Yellow
 $workflowsDir = Join-Path $rootDir "workflows"
 $workflows = Get-ChildItem -Path $workflowsDir -Directory
 Write-Host "Found $($workflows.Count) workflows in $workflowsDir"
 
-if ($workflows.Count -lt 24) {
-    Write-Host " [FAIL] Expected at least 24 workflows, but found $($workflows.Count)" -ForegroundColor Red
+if ($workflows.Count -lt 25) {
+    Write-Host " [FAIL] Expected at least 25 workflows, but found $($workflows.Count)" -ForegroundColor Red
     $script:failures++
 }
 
@@ -133,13 +134,22 @@ foreach ($wf in $workflows) {
 
 Write-Host "`n--- 6. Checking Templates & Prompts ---" -ForegroundColor Yellow
 $templates = @(
+    "templates\PROJECT_OVERVIEW.md",
+    "templates\RESEARCH.md",
     "templates\PRD.md",
+    "templates\TRD.md",
+    "templates\USER_FLOW.md",
+    "templates\SCREEN_LIST.md",
+    "templates\WIREFRAME.md",
+    "templates\UI_UX_SPECIFICATION.md",
     "templates\ARCHITECTURE.md",
+    "templates\TECH_STACK.md",
     "templates\DESIGN.md",
     "templates\DATABASE.md",
     "templates\API.md",
     "templates\TASKS.md",
     "templates\TEST_PLAN.md",
+    "templates\IMPLEMENTATION_PLAN.md",
     "templates\SECURITY.md",
     "templates\DECISIONS.md",
     "templates\MEMORY.md",

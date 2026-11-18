@@ -1,11 +1,11 @@
 # Flutter Agent Kit 🚀
 
-[![Release: v2.5.0](https://img.shields.io/badge/Release-v2.5.0-blue.svg)](CHANGELOG.md)
+[![Release: v2.6.0](https://img.shields.io/badge/Release-v2.6.0-blue.svg)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Flutter: 3.x](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter)](https://flutter.dev)
 [![Dart: 3.x](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)](https://dart.dev)
 [![Platform: Windows | macOS | Linux | Android | iOS | Web](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android%20%7C%20iOS%20%7C%20Web-blue)]()
-[![Validation: 100% Pass](https://img.shields.io/badge/Validation-100%25%20Passed%20(103%2F103)-brightgreen.svg)](docs/FINAL_QUALITY_AUDIT.md)
+[![Validation: 100% Pass](https://img.shields.io/badge/Validation-100%25%20Passed%20(115%2F115)-brightgreen.svg)](docs/FINAL_QUALITY_AUDIT.md)
 [![Agent Ready](https://img.shields.io/badge/AI%20Agents-Cursor%20%7C%20Claude%20%7C%20Gemini%20%7C%20Copilot%20%7C%20Codex-purple.svg)](docs/AGENT_COMPATIBILITY.md)
 
 A universal, production-ready engineering knowledge framework and operational toolkit that empowers AI coding assistants (**Cursor**, **Claude Code**, **Gemini CLI**, **GitHub Copilot**, **OpenAI Codex**, **Antigravity**) to architect, build, debug, optimize, review, and release high-performance Flutter and Dart applications with zero hallucinations, zero dummy data, and strict software craftsmanship.
@@ -36,6 +36,7 @@ The **Flutter Agent Kit** provides a battle-tested, structured engineering syste
 8. **Advanced Performance Engineering**: Algorithmic complexity analysis ($O(1)$ lookups, `StringBuffer`, lazy evaluations), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
 9. **First-Class Windows Desktop Support**: Win32 single-instance mutex, Per-Monitor V2 DPI awareness, system tray utilities, window state machine precision, and signed MSIX packaging (`docs/WINDOWS_DEVELOPMENT.md`).
 10. **Deterministic Proof of Work**: Mandatory verification via real CLI tools (`flutter analyze`, `flutter test`) with zero fabricated passes (`core/verification-policy.md`).
+11. **Mandatory 15-Phase SDLC & Task Management**: Enforcing the 15-phase SDLC as the default lifecycle: $\text{Idea \& Research} \to \text{PRD} \to \text{User Flow} \to \text{Wireframe} \to \text{Design} \to \text{Architecture} \to \text{DB \& API} \to \text{Tasks} \to \text{Setup} \to \text{Development} \to \text{Integration} \to \text{Testing} \to \text{Security} \to \text{Deployment} \to \text{Maintenance}$ (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 
 ---
 
@@ -58,23 +59,23 @@ graph TD
     
     subgraph Foundations ["Operational Foundations"]
         Core --> Rules["50+ Domain Rules<br>(Dart, Flutter, State, Database, Networking, Errors, Security, Testing, Platforms)"]
-        Core --> Skills["34 Specialized Skills<br>(12 Canonical Sections + YAML Frontmatter)"]
-        Core --> Workflows["24 Lifecycle Workflows<br>(Product Discovery to Production Launch)"]
+        Core --> Skills["35 Specialized Skills<br>(12 Canonical Sections + YAML Frontmatter)"]
+        Core --> Workflows["25 Lifecycle Workflows<br>(Product Discovery to Production Launch)"]
     end
     
     subgraph Execution ["Tooling, Context & Verification"]
-        Workflows --> Prompts["19 Canonical Prompts<br>(Standard 9-Section Specification)"]
-        Workflows --> Templates["11 Architecture Templates<br>(PRD, Architecture, Design, Database, API, etc.)"]
+        Workflows --> Prompts["20 Canonical Prompts<br>(Standard 9-Section Specification)"]
+        Workflows --> Templates["20 Architecture Templates<br>(Overview, Research, PRD, TRD, User Flow, Wireframes, etc.)"]
         Skills --> CLI["CLI Verification Tools<br>(flutter analyze, flutter test, flutter run)"]
-        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 103 Files Checked, 0 Failures)"]
+        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 115 Files Checked, 0 Failures)"]
     end
 ```
 
 ---
 
-## 🛡️ The 4 Core Invariant Systems
+## 🛡️ The 5 Core Invariant Systems
 
-The Flutter Agent Kit embeds four mandatory invariant systems across all agent entry points:
+The Flutter Agent Kit embeds five mandatory invariant systems across all agent entry points:
 
 ### 1. Zero Dummy Data & Real Data Integrity
 - **Real Data Only**: AI agents must never introduce fake records, dummy metrics, or mock data fallbacks in production screens.
@@ -106,6 +107,15 @@ The Flutter Agent Kit embeds four mandatory invariant systems across all agent e
 - **Image Decodes & Isolates**: Constrain decoded bitmaps with `cacheWidth`/`cacheHeight` factoring in DPR. Offload CPU-heavy operations ($> 8\,\text{ms}$) to `Isolate.run()`.
 - *Specification*: [`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`](docs/PERFORMANCE_ENGINEERING_STANDARDS.md) | Skill: `skills/performance-engineering/` | Workflow: `workflows/performance-audit/`
 
+### 5. Mandatory 15-Phase SDLC, Task Management & Documentation Architecture
+- **Mandatory 15-Phase SDLC as Default**: The 15-phase SDLC ($\text{Idea \& Research} \to \text{PRD \& Requirements} \to \text{User Flow} \to \text{Wireframe \& UI/UX} \to \text{Design System} \to \text{Technical Architecture} \to \text{Database \& API Design} \to \text{Task Breakdown} \to \text{Project Setup} \to \text{Development} \to \text{Integration} \to \text{Testing \& QA} \to \text{Security \& Optimization} \to \text{Deployment} \to \text{Monitoring \& Maintenance}$) is the default development lifecycle for all new projects and major feature builds.
+- **Hierarchical Task Breakdown & 13-Field Schema**: Decompose requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md`. Every task defines 13 mandatory schema fields (ID, title, description, objective, requirements, affected files, dependencies, steps, acceptance criteria, testing requirements, expected outcome, priority, status) across 5 valid statuses (`Not Started`, `In Progress`, `Blocked`, `Testing`, `Completed`).
+- **Sequential 10-Step Execution Loop**: In Phase 10 (Development), execute strictly one task at a time: $\text{READ} \to \text{UNDERSTAND} \to \text{PLAN} \to \text{IMPLEMENT} \to \text{TEST} \to \text{REVIEW} \to \text{FIX} \to \text{DOCUMENT} \to \text{VERIFY} \to \text{MARK COMPLETED}$.
+- **12-Point Completion Checklist & 7-Step Remediation**: Tasks must satisfy all 12 completion criteria before being marked `Completed`. If tests fail, follow the 7-step root-cause isolation and minimal fix protocol.
+- **In-Project Documentation Only**: All 20 project planning templates (`PROJECT_OVERVIEW.md`, `RESEARCH.md`, `PRD.md`, `TRD.md`, `USER_FLOW.md`, `SCREEN_LIST.md`, `WIREFRAME.md`, `UI_UX_SPECIFICATION.md`, `DESIGN.md`, `ARCHITECTURE.md`, `TECH_STACK.md`, `DATABASE.md`, `API.md`, `TASKS.md`, `IMPLEMENTATION_PLAN.md`, etc.) reside inside `docs/` and `tasks/` in the project root. Never create global or temporary files.
+- **Mandatory Git Protection**: Private AI planning documentation (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) is protected via `.gitignore`. Public docs (`README.md`, `LICENSE`, `CHANGELOG.md`, `AGENTS.md`) remain tracked.
+- *Specification*: [`docs/TASK_MANAGEMENT_STANDARDS.md`](docs/TASK_MANAGEMENT_STANDARDS.md) | Skill: `skills/task-management/` | Workflow: `workflows/task-lifecycle/`
+
 ---
 
 ## 🤖 Multi-Agent Compatibility Matrix
@@ -136,9 +146,9 @@ The foundational policies governing AI agent behavior:
 - `change-discipline.md`: Surgical vertical slice edits and zero collateral refactoring.
 - `verification-policy.md`: Proof-of-work protocols, real test execution, and zero fake passes.
 
-### 2. Specialized Skills System (34 Skills in `skills/`)
+### 2. Specialized Skills System (35 Skills in `skills/`)
 Each skill follows the open Agent Skills format with YAML frontmatter and 12 canonical sections:
-- **Discovery & Architecture**: `project-analysis`, `flutter-architecture`, `dart-best-practices`.
+- **Discovery & Architecture**: `project-analysis`, `task-management`, `flutter-architecture`, `dart-best-practices`.
 - **UI & Graphics**: `ui-implementation`, `design-system`, `animations`, `custom-painter`, `responsive-design`.
 - **Navigation & UX**: `navigation`, `navigation-clarity`.
 - **Data & Networking**: `database-integration`, `api-integration`, `error-handling`, `real-data-integrity`.
@@ -149,7 +159,7 @@ Each skill follows the open Agent Skills format with YAML frontmatter and 12 can
 
 *See [docs/SKILLS_CATALOG.md](docs/SKILLS_CATALOG.md) for the complete directory.*
 
-### 3. Engineering Lifecycle Workflows (24 Workflows in `workflows/`)
+### 3. Engineering Lifecycle Workflows (25 Workflows in `workflows/`)
 Step-by-step engineering protocols with Entry Conditions, Phased Procedures, and Exit Criteria:
 1. `new-project`: Concept to runnable baseline.
 2. `existing-project-analysis`: Deep brownfield codebase analysis.
@@ -175,11 +185,12 @@ Step-by-step engineering protocols with Entry Conditions, Phased Procedures, and
 22. `design-consistency-audit`: Design drift detection, tokenization, and visual cohesion audit.
 23. `navigation-usability-audit`: Icon clarity, action discoverability, a11y labels, and nav hierarchy audit.
 24. `performance-audit`: Algorithmic complexity, memory lifecycle, rebuild scopes, and isolate concurrency audit.
+25. `task-lifecycle`: Upfront analysis, in-project docs, task breakdown, sequential execution, and .gitignore protection.
 
 *See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for the complete guide.*
 
-### 4. Standardized Prompts Library (19 Prompts in `prompts/`)
-All 19 prompts across 10 categories enforce the canonical 9-section context specification:
+### 4. Standardized Prompts Library (20 Prompts in `prompts/`)
+All 20 prompts across 10 categories enforce the canonical 9-section context specification:
 `PROJECT CONTEXT` | `OBJECTIVE` | `EXISTING BEHAVIOR` | `REQUIRED INVESTIGATION` | `CONSTRAINTS` | `ACCEPTANCE CRITERIA` | `EDGE CASES` | `TESTING REQUIREMENTS` | `EXPECTED OUTPUT`.
 
 Categories:
@@ -189,21 +200,30 @@ Categories:
 - **Deployment**: `production-setup-prompt.md`, `monitoring-prompt.md`, `final-audit-prompt.md`
 - **Feature Development**: `feature-prompt.md`, `auth-prompt.md`, `database-backend-prompt.md`
 - **Performance**: `performance-optimization-prompt.md`, `algorithmic-efficiency-review.md`
-- **Project Planning**: `prd-prompt.md`
+- **Project Planning**: `prd-prompt.md`, `task-breakdown-prompt.md`
 - **Security**: `security-hardening-prompt.md`
 - **Testing**: `testing-qa-prompt.md`, `real-data-integrity-audit.md`
 - **UI/UX**: `design-prompt.md`, `ui-redesign-prompt.md`, `design-consistency-audit.md`, `navigation-icon-audit.md`
 
-### 5. Project Templates (11 Templates in `templates/`)
-- `PRD.md`: Product Requirements Document template.
-- `ARCHITECTURE.md`: Architecture blueprint and system boundaries.
-- `DESIGN.md`: Complete Design System tokens specification (13 color roles, typography, spacing).
-- `DATABASE.md`: Schema, tables, relations, and indexing plan.
-- `API.md`: REST/GraphQL contracts, endpoints, and error models.
-- `TASKS.md`: Project execution roadmap with checklist tracking.
-- `TEST_PLAN.md`: Test strategy, coverage targets, and test matrices.
-- `SECURITY.md`: Security controls, secret management, and threat model.
-- `DECISIONS.md`: Architecture Decision Records (ADR).
+### 5. Project Templates (20 Templates in `templates/`)
+- `PROJECT_OVERVIEW.md`: Product vision, target audience, value proposition, and MVP scope (Phase 01).
+- `RESEARCH.md`: Competitive analysis, market/technical feasibility research (Phase 01).
+- `PRD.md`: Product Requirements Document template (Phase 02).
+- `TRD.md`: Technical Requirements Document template (Phase 02).
+- `USER_FLOW.md`: Navigation state machine, screen transitions, and user journeys (Phase 03).
+- `SCREEN_LIST.md`: Inventory of all application screens, routes, and modal surfaces (Phase 03).
+- `WIREFRAME.md`: Structural layout wireframes for all major screens and modals (Phase 04).
+- `UI_UX_SPECIFICATION.md`: Interaction specifications, gesture behaviors, and accessibility (Phase 04).
+- `DESIGN.md`: Complete Design System tokens specification (13 color roles, typography, spacing) (Phase 05).
+- `ARCHITECTURE.md`: Architecture blueprint and system boundaries (Phase 06).
+- `TECH_STACK.md`: Technology stack decision and trade-off analysis matrix (Phase 06).
+- `DATABASE.md`: Schema, tables, relations, and indexing plan (Phase 07).
+- `API.md`: REST/GraphQL contracts, endpoints, and error models (Phase 07).
+- `TASKS.md`: Project execution roadmap with 13-field task specification schema (Phase 08).
+- `IMPLEMENTATION_PLAN.md`: Phase roadmap, milestones, and deliverables (Phase 08).
+- `TEST_PLAN.md`: Test strategy, coverage targets, and test matrices (Phase 12).
+- `SECURITY.md`: Security controls, secret management, and threat model (Phase 13).
+- `DECISIONS.md`: Architecture Decision Records (ADRs).
 - `MEMORY.md`: Long-term project memory and agent state.
 - `.env.example`: Secure environment variables blueprint.
 
@@ -250,8 +270,9 @@ The Flutter Agent Kit provides enterprise-grade Windows desktop capabilities:
 | [`docs/NAVIGATION_AND_ICON_STANDARDS.md`](docs/NAVIGATION_AND_ICON_STANDARDS.md) | 3–5 destinations rule, icon clarity, and 10-point navigation checklist |
 | [`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`](docs/PERFORMANCE_ENGINEERING_STANDARDS.md) | Big-O complexity, pure builds, isolate concurrency, and 15-point checklist |
 | [`docs/WINDOWS_DEVELOPMENT.md`](docs/WINDOWS_DEVELOPMENT.md) | Win32 single-instance mutex, DPI awareness, tray, and MSIX packaging |
-| [`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md) | Complete index and matrix of all 34 specialized skills |
-| [`docs/WORKFLOWS.md`](docs/WORKFLOWS.md) | Complete directory and trigger conditions for all 24 workflows |
+| [`docs/TASK_MANAGEMENT_STANDARDS.md`](docs/TASK_MANAGEMENT_STANDARDS.md) | Task breakdown, in-project documentation, sequential execution & .gitignore protection |
+| [`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md) | Complete index and matrix of all 35 specialized skills |
+| [`docs/WORKFLOWS.md`](docs/WORKFLOWS.md) | Complete directory and trigger conditions for all 25 workflows |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System architecture blueprint and dependency relationships |
 | [`docs/SKILL_SYSTEM_AUDIT.md`](docs/SKILL_SYSTEM_AUDIT.md) | Comprehensive audit report covering all skills, workflows, and rules |
 | [`docs/FINAL_QUALITY_AUDIT.md`](docs/FINAL_QUALITY_AUDIT.md) | Formal quality certification & production launch audit |
@@ -267,7 +288,7 @@ The Flutter Agent Kit provides enterprise-grade Windows desktop capabilities:
 The kit includes automated validation tools that verify file integrity, skill manifests, YAML frontmatter, workflow completeness, and internal markdown link integrity:
 
 ```powershell
-# 1. PowerShell Master Validator (103 files verified, 0 failures)
+# 1. PowerShell Master Validator (115 files verified, 0 failures)
 powershell -ExecutionPolicy Bypass -File scripts\PowerShell\validate-kit.ps1
 
 # 2. Dart Structure & Manifest Integrity Validator
@@ -300,21 +321,35 @@ Copy or link the entry file matching your AI coding assistant into your Flutter 
 - For **OpenAI Codex / Antigravity**: `AGENTS.md`
 
 ### Step 2: Onboard Your Agent
+
+#### For New Projects (Greenfield):
+Prompt your agent to follow the mandatory 15-Phase SDLC:
+```text
+Execute the 15-Phase SDLC workflow (workflows/task-lifecycle/WORKFLOW.md):
+1. Start with Phase 01 (Idea & Research) and author docs/PROJECT_OVERVIEW.md.
+2. Advance through Phase 02 (PRD) and Phase 05 (Design System) before implementing code.
+3. Decompose features into atomic tasks in tasks/TASKS.md using the 13-field schema (Phase 08).
+4. Implement sequentially one task at a time (Phase 10) following the 10-step loop.
+```
+
+#### For Existing Projects (Brownfield):
 Prompt your agent to analyze the project non-destructively:
 ```text
 Execute the Existing Project Analysis workflow (workflows/existing-project-analysis/WORKFLOW.md):
 1. Inspect pubspec.yaml to identify SDK constraints and dependencies.
-2. Inspect lib/ to determine the state management and architecture.
+2. Inspect lib/ to determine state management, architecture, and completed phases.
 3. Report findings in docs/MEMORY.md without modifying any application code.
+4. Resume execution from the current active phase while preserving existing code.
 ```
 
 ### Step 3: Implement with Surgical Precision
 When asking your agent to build a feature or fix a bug:
 ```text
-Implement [Feature Name] following core/change-discipline.md:
-1. Follow the feature-development workflow (workflows/feature-development/WORKFLOW.md).
-2. Adhere to the 4 UI states and the Zero Dummy Data standard.
-3. Verify your work by running `flutter analyze` and `flutter test`.
+Implement [Task ID / Feature Name] following core/change-discipline.md:
+1. Follow the 10-step execution loop: READ -> UNDERSTAND -> PLAN -> IMPLEMENT -> TEST -> REVIEW -> FIX -> DOCUMENT -> VERIFY -> MARK COMPLETED.
+2. Adhere to the 4 UI states, the Zero Dummy Data standard, and docs/DESIGN.md tokens.
+3. Satisfy the 12-point task completion checklist.
+4. Verify your work by running `flutter analyze` and `flutter test`.
 ```
 
 ---

@@ -15,6 +15,7 @@ You are a Principal Flutter Architect and Senior Software Engineering Lead guide
 - Global design consistency: one cohesive visual identity. Use design tokens, 4pt/8pt spacing, and reusable components. Verify the 13-point checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
 - Navigation clarity & discoverability: keep 3–5 mobile bottom nav destinations with visible labels. Avoid ambiguous icon-only buttons; provide action-descriptive a11y labels (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
 - Performance engineering & efficiency: enforce algorithmic efficiency ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal in `dispose()`, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
+- Mandatory 15-phase SDLC & task management: follow the 15-phase SDLC as the default development lifecycle. In Phase 10 (Development), execute sequentially one task at a time following READ -> UNDERSTAND -> PLAN -> IMPLEMENT -> TEST -> REVIEW -> FIX -> DOCUMENT -> VERIFY -> MARK COMPLETED. Decompose tasks in `tasks/TASKS.md`, update `MEMORY.md`, and protect private AI docs via `.gitignore` (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 - Unified error handling: register `FlutterError.onError` and `PlatformDispatcher.onError`; use sealed typed failures (`rules/error-handling/`).
 - Desktop & Windows: closing a window is NOT process termination. Enforce Win32 single-instance mutex and Per-Monitor V2 DPI awareness.
 
@@ -24,10 +25,11 @@ You are a Principal Flutter Architect and Senior Software Engineering Lead guide
 - Design System Standards: See `docs/DESIGN_SYSTEM_STANDARDS.md` and `skills/design-system/`
 - Navigation Clarity & Icons: See `docs/NAVIGATION_AND_ICON_STANDARDS.md` and `skills/navigation-clarity/`
 - Performance Standards: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md` and `skills/performance-engineering/`
+- Task Management Standards: See `docs/TASK_MANAGEMENT_STANDARDS.md` and `skills/task-management/`
 - Dart Rules: See `rules/dart/`
 - Flutter Rules: See `rules/flutter/`
 - Architecture: See `rules/architecture/`
 - Error Handling: See `rules/error-handling/` and `skills/error-handling/`
 - Windows Development: See `rules/platform/windows/` and `skills/windows-development/`
-- Skills Catalog: See `docs/SKILLS_CATALOG.md` (34 specialized skills)
-- Lifecycle Workflows: See `docs/WORKFLOWS.md` (24 structured workflows)
+- Skills Catalog: See `docs/SKILLS_CATALOG.md` (35 specialized skills)
+- Lifecycle Workflows: See `docs/WORKFLOWS.md` (25 structured workflows)
