@@ -235,3 +235,18 @@ final class AuthFailure extends Failure {
 - **Mandatory 15-Point Performance Checklist**: Every implementation must satisfy the 15-point checklist prior to completion.
 - **Specification Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
 
+---
+
+## 12. Professional Task Management, Documentation & Incremental Development Standard
+
+- **The Golden Rule**: $\text{Plan First} \to \text{Document Second} \to \text{Break Down Work} \to \text{Implement One Task} \to \text{Test \& Verify} \to \text{Update Docs} \to \text{Next Task}$. Never implement complex projects in a single massive operation.
+- **Mandatory Pre-Implementation Discovery**: Execute the 7 discovery steps (structure, stack, directives, conventions, requirements, assumptions, complexity classification) before modifying code.
+- **Large Task Breakdown Hierarchy**: Decompose large requirements into Project $\to$ Modules $\to$ Features $\to$ Sub-features $\to$ Development Phases $\to$ Tasks $\to$ Testing Tasks. Every task must be sized for independent execution and define the 13 mandatory schema fields (ID, title, description, objective, requirements, affected files, dependencies, steps, acceptance criteria, testing requirements, expected outcome, priority, status).
+- **Sequential Task Execution Loop**: Work strictly sequentially on one implementation task at a time. Prerequisites must be completed before starting dependent tasks. A task is marked `Completed` only after acceptance criteria pass empirical testing.
+- **Automatic In-Project Documentation**: All AI-generated project documents (`PRD.md`, `TRD.md`, `ARCHITECTURE.md`, `DESIGN.md`, `DATABASE.md`, `API.md`, `SECURITY.md`, `TEST_PLAN.md`, `IMPLEMENTATION_PLAN.md`, `TASKS.md`, `DECISIONS.md`, `MEMORY.md`) must reside inside `docs/` and `tasks/` in the project root. Never create global or temporary project documentation.
+- **Mandatory GitHub Protection**: Private AI planning documentation and task registries must be excluded from public Git remotes via `.gitignore` (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, etc.).
+- **12-Point Task Completion Verification**: Before marking any task completed, pass all 12 items of the Task Completion Verification Checklist.
+- **Failed Task Recovery Protocol**: If tests fail, execute root-cause isolation, apply the smallest safe fix, retest, and verify zero regressions. Never fake passing results.
+- **Token Efficiency Invariant**: Read in concentric rings; cache context in `MEMORY.md` rather than re-reading identical files; output targeted diffs rather than full file rewrites.
+- **Specification Reference**: See `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.
+

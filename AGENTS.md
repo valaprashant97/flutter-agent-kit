@@ -30,6 +30,7 @@ For every user instruction or task:
    - Enforce global design consistency: one cohesive visual identity, design tokens, 4pt/8pt spacing, reusable components, and 13-point checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/`).
    - Enforce navigation clarity: 3–5 mobile bottom nav destinations, visible labels, unambiguous icons, action-descriptive a11y labels, and 10-point checklist (`docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/`).
    - Enforce performance engineering: algorithmic efficiency ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal in `dispose()`, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/`).
+   - Enforce task management & incremental development: plan first, document second, break down large work in `tasks/TASKS.md`, execute one task at a time, update `MEMORY.md`, and protect private AI docs via `.gitignore` (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`).
 5. **Verify with Proof**: Execute relevant verification commands (`flutter analyze`, `flutter test`, or `flutter build windows --release`). Never fake verification. Read `core/verification-policy.md`.
 6. **Report Concisely**: Deliver the modified code, concise explanation of changes, verification results, and any remaining risks.
 
@@ -94,10 +95,23 @@ When developing for Windows Desktop:
 
 ---
 
-## 8. Skills, Rules & Workflows Reference (Single Source of Truth)
+## 8. Task Management, In-Project Documentation & Incremental Execution Invariants
 
-- **Single Source of Truth Standards**: Read `core/engineering-standards.md` for coding, architecture, real data integrity, design consistency, navigation clarity, performance engineering, and verification invariants.
-- **Skills Catalog**: See `docs/SKILLS_CATALOG.md` for index of all 34 specialized skills in `skills/`.
-- **Lifecycle Workflows**: Follow the 24 structured workflows in `workflows/` (PRD, Architecture, Design System, Design Consistency Audit, Navigation Usability Audit, Performance Audit, Real Data Audit, Database, API, Auth, Feature Dev, Bug Fixing, Root Cause, Windows Desktop, QA, Release Preparation).
+- **The Golden Rule**: $\text{Plan First} \to \text{Document Second} \to \text{Break Down Work} \to \text{One Task at a Time} \to \text{Test \& Verify} \to \text{Update Docs} \to \text{Next Task}$. Never attempt to complete a large software project in one massive coding operation.
+- **Hierarchical Task Breakdown**: Decompose large requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md`. Every task must define the 13 schema fields and have an explicit status (`Not Started`, `In Progress`, `Blocked`, `Testing`, `Completed`).
+- **Sequential Execution Loop**: Work strictly sequentially on one implementation task. Prerequisite tasks must be completed before starting dependent tasks. A task is completed only when acceptance criteria are verified.
+- **In-Project Documentation Only**: Store all project documentation inside `docs/` and `tasks/` in the project root. Never create project documents in global or temporary directories.
+- **Mandatory GitHub Protection**: All private AI-generated planning documents (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) must be excluded from public Git remotes via `.gitignore`.
+- **12-Point Completion Checklist**: Pass every item of the Task Completion Checklist before marking a task `Completed`.
+- **Failed Task Protocol**: Diagnose the root cause, inspect logs, apply the smallest safe fix, and retest. Never suppress errors or fake test results.
+- **Reference**: Consult `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.
+
+---
+
+## 9. Skills, Rules & Workflows Reference (Single Source of Truth)
+
+- **Single Source of Truth Standards**: Read `core/engineering-standards.md` for coding, architecture, real data integrity, design consistency, navigation clarity, performance engineering, task management, and verification invariants.
+- **Skills Catalog**: See `docs/SKILLS_CATALOG.md` for index of all 35 specialized skills in `skills/`.
+- **Lifecycle Workflows**: Follow the 25 structured workflows in `workflows/` (PRD, Architecture, Task Lifecycle, Design System, Design Consistency Audit, Navigation Usability Audit, Performance Audit, Real Data Audit, Database, API, Auth, Feature Dev, Bug Fixing, Root Cause, Windows Desktop, QA, Release Preparation).
 - **Rules Repository**: Follow domain rules in `rules/` (Dart, Flutter, Architecture, State Management, Database, Networking, Error Handling, Security, Testing, Performance, Platform).
-- **Project Documentation**: Maintain `docs/MEMORY.md`, `docs/DECISIONS.md`, and `docs/TASKS.md`.
+- **Project Documentation**: Maintain `docs/MEMORY.md`, `docs/DECISIONS.md`, and `tasks/TASKS.md`.

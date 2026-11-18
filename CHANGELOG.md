@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.6.0] - 2026-11-18
+
+### Professional Task Management, In-Project Documentation Architecture & Incremental Development System
+
+#### Added
+- **Task Management & In-Project Documentation Specification**:
+  - `docs/TASK_MANAGEMENT_STANDARDS.md`: Authoritative engineering standard establishing the mandatory 7-step pre-implementation project analysis protocol, hierarchical task decomposition model ($\text{Project} \to \text{Modules} \to \text{Features} \to \text{Phases} \to \text{Tasks}$), 13 mandatory task schema fields, 5 valid task statuses (`Not Started`, `In Progress`, `Blocked`, `Testing`, `Completed`), automatic in-project documentation architecture (`docs/` and `tasks/` in project root), mandatory `.gitignore` protection rules, 12-step sequential execution loop, 14 permanent AI directives, 12-point task completion verification checklist, 7-step failed task diagnosis & remediation protocol, token efficiency guidelines, and standardized reporting templates.
+- **Dedicated Agent Skill**:
+  - `skills/task-management/SKILL.md`: Self-contained 12-section canonical skill manifest enforcing hierarchical task decomposition, in-project documentation architecture, sequential execution loop, gitignore protection, and incremental development workflow across all technologies (Total: 35 Skills).
+- **Dedicated Lifecycle Workflow**:
+  - `workflows/task-lifecycle/WORKFLOW.md`: Complete 6-phase systematic workflow guiding AI coding agents through project analysis, documentation setup, task breakdown, gitignore protection, sequential task execution, and phase completion (Total: 25 Workflows).
+- **Standardized Task Breakdown Prompt**:
+  - `prompts/project-planning/task-breakdown-prompt.md`: Enforces the canonical 9-section context specification for decomposing complex, multi-feature projects into atomic, verifiable tasks with the 13-field schema (Total: 20 Prompts).
+- **Project Planning Templates**:
+  - `templates/TRD.md`: Production-ready Technical Requirements Document template covering system context, non-functional requirements, data models, integration contracts, security, and rollout strategy.
+  - `templates/IMPLEMENTATION_PLAN.md`: Production-ready Implementation Plan Document template detailing execution phases, dependencies, milestones, risk mitigation, and verification gates.
+  - `templates/tasks/phases/PHASE_01.md`: Phase breakdown template illustrating atomic task decomposition using the 13-field schema.
+- **Universal Cross-Stack AI Skill**:
+  - `C:\Users\admin\.gemini\config\skills\software-engineering-workflow\SKILL.md`: Global AI skill enabling Antigravity and AI coding agents to apply this workflow across Flutter, React, Next.js, Node.js, Python, and other technologies.
+
+#### Changed
+- `core/agent-principles.md`: Added Section 7 "The Task Management, Documentation & Incremental Development Invariant".
+- `core/engineering-standards.md`: Added Section 12 "Professional Task Management, Documentation & Incremental Development Standard".
+- Aligned all agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`) with explicit task management invariants, `.gitignore` rules, and updated catalog sizes (35 skills, 25 workflows).
+- Upgraded `templates/TASKS.md` to strictly enforce the 13-field schema and 5 valid task statuses.
+- Upgraded `templates/MEMORY.md` to track active phase, current task, completed tasks, pending tasks, and immediate next steps.
+- Configured `.gitignore` in `flutter-agent-kit` with the mandatory AI Development & Task Management protection block (`/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`, `/PROJECT_ANALYSIS.md`, `/TECHNICAL_ANALYSIS.md`).
+- Synchronized `docs/SKILLS_CATALOG.md` (35 skills), `docs/WORKFLOWS.md` (25 workflows), `docs/AGENT_COMPATIBILITY.md`, `README.md`, and `TASKS.md`.
+- Extended validation coverage in `scripts/PowerShell/validate-kit.ps1` to 108 files with 100% pass rate.
+
+---
+
 ## [2.5.0] - 2026-11-17
 
 ### Skill System Audit, Scope Differentiation & Launch Certification

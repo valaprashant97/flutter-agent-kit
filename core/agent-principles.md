@@ -88,6 +88,14 @@ $$\mathbf{Correctness} > \mathbf{Requirement\ Compliance} > \mathbf{Existing\ Co
 - **Proof-of-Performance**: Profile in profile/release mode using DevTools. Never claim 60/120 FPS without measurement. Include a standardized **Performance Analysis** block (Time, Auxiliary Space, considerations, bottlenecks) for algorithmic and meaningful code.
 - **Reference**: See `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, and `workflows/performance-audit/WORKFLOW.md`.
 
+---
 
+## 7. The Task Management, Documentation & Incremental Development Invariant
 
-
+- **Plan First, Document Second, Implement Incrementally**: Never attempt to complete a large software project in one massive coding operation. Large or complex requirements must be systematically decomposed into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks before modifying code.
+- **Sequential Execution Loop**: Execute strictly one task at a time following the loop: Read Docs $\to$ Understand $\to$ Plan $\to$ Select Task $\to$ Inspect Code $\to$ Implement Slice $\to$ Test $\to$ Review $\to$ Fix Issues $\to$ Update Docs $\to$ Mark Complete $\to$ Next Task.
+- **In-Project Documentation Only**: All AI-generated project planning and development documentation must reside inside `docs/` and `tasks/` in the project root. Never create global or temporary project documentation.
+- **Mandatory GitHub Protection**: Private AI-generated planning documents (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) must be excluded from public Git remotes via `.gitignore`.
+- **12-Point Task Completion Verification**: A task is marked `Completed` only after passing the 12-point checklist, with real test execution and static analysis cleanly passing.
+- **Failed Task Recovery Protocol**: If tests fail, diagnose the actual root cause, inspect logs, apply the smallest safe fix, and retest. Never suppress errors or fake passing tests.
+- **Reference**: See `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.

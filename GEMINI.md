@@ -14,6 +14,7 @@ Operating standards for Gemini CLI in Flutter and Dart development under the **F
 - **Global Design Consistency**: Maintain one cohesive visual identity across all screens. Consume global design tokens, 4pt/8pt spacing, and reusable components. Satisfy the 13-point design checklist (`docs/DESIGN_SYSTEM_STANDARDS.md`).
 - **Navigation Clarity & Discoverability**: Maintain 3–5 mobile bottom nav destinations with visible labels. Avoid ambiguous icon-only buttons; provide action-descriptive accessibility labels and require confirmation for destructive actions (`docs/NAVIGATION_AND_ICON_STANDARDS.md`).
 - **Performance Engineering & Efficiency**: Enforce algorithmic efficiency ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal in `dispose()`, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
+- **Task Management & Incremental Development**: Plan first, document second, break down work in `tasks/TASKS.md`, execute one task at a time, update `MEMORY.md`, and protect private AI docs via `.gitignore` (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 - **Unified Error Handling**: Enforce `FlutterError.onError`, `PlatformDispatcher.onError`, sealed failures, and user-safe error messages (`skills/error-handling/`, `rules/error-handling/`).
 
 ---
@@ -41,7 +42,8 @@ flutter build windows --release
 - **Design System Standards**: `docs/DESIGN_SYSTEM_STANDARDS.md` and `skills/design-system/`
 - **Navigation & Icon Standards**: `docs/NAVIGATION_AND_ICON_STANDARDS.md` and `skills/navigation-clarity/`
 - **Performance Engineering Standards**: `docs/PERFORMANCE_ENGINEERING_STANDARDS.md` and `skills/performance-engineering/`
+- **Task Management Standards**: `docs/TASK_MANAGEMENT_STANDARDS.md` and `skills/task-management/`
 - **Domain Rules**: `rules/` (Dart, Flutter, Architecture, Error Handling, Testing, Platform)
-- **Actionable Skills**: `docs/SKILLS_CATALOG.md` (34 specialized skills)
-- **Lifecycle Workflows**: `docs/WORKFLOWS.md` (24 structured workflows)
+- **Actionable Skills**: `docs/SKILLS_CATALOG.md` (35 specialized skills)
+- **Lifecycle Workflows**: `docs/WORKFLOWS.md` (25 structured workflows)
 - **Windows Engineering**: `docs/WINDOWS_DEVELOPMENT.md` and `skills/windows-development/`

@@ -36,6 +36,7 @@ The **Flutter Agent Kit** provides a battle-tested, structured engineering syste
 8. **Advanced Performance Engineering**: Algorithmic complexity analysis ($O(1)$ lookups, `StringBuffer`, lazy evaluations), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
 9. **First-Class Windows Desktop Support**: Win32 single-instance mutex, Per-Monitor V2 DPI awareness, system tray utilities, window state machine precision, and signed MSIX packaging (`docs/WINDOWS_DEVELOPMENT.md`).
 10. **Deterministic Proof of Work**: Mandatory verification via real CLI tools (`flutter analyze`, `flutter test`) with zero fabricated passes (`core/verification-policy.md`).
+11. **Professional Task Management & Incremental Development**: Enforcing the golden rule: Plan first, document second, break down work, implement one task at a time, test, verify, update documentation, then move to the next task (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 
 ---
 
@@ -58,23 +59,23 @@ graph TD
     
     subgraph Foundations ["Operational Foundations"]
         Core --> Rules["50+ Domain Rules<br>(Dart, Flutter, State, Database, Networking, Errors, Security, Testing, Platforms)"]
-        Core --> Skills["34 Specialized Skills<br>(12 Canonical Sections + YAML Frontmatter)"]
-        Core --> Workflows["24 Lifecycle Workflows<br>(Product Discovery to Production Launch)"]
+        Core --> Skills["35 Specialized Skills<br>(12 Canonical Sections + YAML Frontmatter)"]
+        Core --> Workflows["25 Lifecycle Workflows<br>(Product Discovery to Production Launch)"]
     end
     
     subgraph Execution ["Tooling, Context & Verification"]
-        Workflows --> Prompts["19 Canonical Prompts<br>(Standard 9-Section Specification)"]
-        Workflows --> Templates["11 Architecture Templates<br>(PRD, Architecture, Design, Database, API, etc.)"]
+        Workflows --> Prompts["20 Canonical Prompts<br>(Standard 9-Section Specification)"]
+        Workflows --> Templates["13 Architecture Templates<br>(PRD, TRD, Architecture, Design, Database, API, etc.)"]
         Skills --> CLI["CLI Verification Tools<br>(flutter analyze, flutter test, flutter run)"]
-        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 103 Files Checked, 0 Failures)"]
+        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 103+ Files Checked, 0 Failures)"]
     end
 ```
 
 ---
 
-## 🛡️ The 4 Core Invariant Systems
+## 🛡️ The 5 Core Invariant Systems
 
-The Flutter Agent Kit embeds four mandatory invariant systems across all agent entry points:
+The Flutter Agent Kit embeds five mandatory invariant systems across all agent entry points:
 
 ### 1. Zero Dummy Data & Real Data Integrity
 - **Real Data Only**: AI agents must never introduce fake records, dummy metrics, or mock data fallbacks in production screens.
@@ -106,6 +107,14 @@ The Flutter Agent Kit embeds four mandatory invariant systems across all agent e
 - **Image Decodes & Isolates**: Constrain decoded bitmaps with `cacheWidth`/`cacheHeight` factoring in DPR. Offload CPU-heavy operations ($> 8\,\text{ms}$) to `Isolate.run()`.
 - *Specification*: [`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`](docs/PERFORMANCE_ENGINEERING_STANDARDS.md) | Skill: `skills/performance-engineering/` | Workflow: `workflows/performance-audit/`
 
+### 5. Task Management, In-Project Documentation & Incremental Execution
+- **Plan First, Document Second, Implement Incrementally**: Never attempt to complete a large software project in one massive coding operation.
+- **Hierarchical Task Breakdown**: Decompose requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md` with explicit statuses.
+- **Sequential Execution Loop**: Execute one task at a time; verify acceptance criteria and test coverage before moving to the next task.
+- **In-Project Documentation Only**: All planning documents live inside `docs/` and `tasks/` in the project root. Never create global or temporary files.
+- **Mandatory GitHub Protection**: Private AI documentation and task registries are excluded from Git via `.gitignore`.
+- *Specification*: [`docs/TASK_MANAGEMENT_STANDARDS.md`](docs/TASK_MANAGEMENT_STANDARDS.md) | Skill: `skills/task-management/` | Workflow: `workflows/task-lifecycle/`
+
 ---
 
 ## 🤖 Multi-Agent Compatibility Matrix
@@ -136,9 +145,9 @@ The foundational policies governing AI agent behavior:
 - `change-discipline.md`: Surgical vertical slice edits and zero collateral refactoring.
 - `verification-policy.md`: Proof-of-work protocols, real test execution, and zero fake passes.
 
-### 2. Specialized Skills System (34 Skills in `skills/`)
+### 2. Specialized Skills System (35 Skills in `skills/`)
 Each skill follows the open Agent Skills format with YAML frontmatter and 12 canonical sections:
-- **Discovery & Architecture**: `project-analysis`, `flutter-architecture`, `dart-best-practices`.
+- **Discovery & Architecture**: `project-analysis`, `task-management`, `flutter-architecture`, `dart-best-practices`.
 - **UI & Graphics**: `ui-implementation`, `design-system`, `animations`, `custom-painter`, `responsive-design`.
 - **Navigation & UX**: `navigation`, `navigation-clarity`.
 - **Data & Networking**: `database-integration`, `api-integration`, `error-handling`, `real-data-integrity`.
@@ -149,7 +158,7 @@ Each skill follows the open Agent Skills format with YAML frontmatter and 12 can
 
 *See [docs/SKILLS_CATALOG.md](docs/SKILLS_CATALOG.md) for the complete directory.*
 
-### 3. Engineering Lifecycle Workflows (24 Workflows in `workflows/`)
+### 3. Engineering Lifecycle Workflows (25 Workflows in `workflows/`)
 Step-by-step engineering protocols with Entry Conditions, Phased Procedures, and Exit Criteria:
 1. `new-project`: Concept to runnable baseline.
 2. `existing-project-analysis`: Deep brownfield codebase analysis.
@@ -175,11 +184,12 @@ Step-by-step engineering protocols with Entry Conditions, Phased Procedures, and
 22. `design-consistency-audit`: Design drift detection, tokenization, and visual cohesion audit.
 23. `navigation-usability-audit`: Icon clarity, action discoverability, a11y labels, and nav hierarchy audit.
 24. `performance-audit`: Algorithmic complexity, memory lifecycle, rebuild scopes, and isolate concurrency audit.
+25. `task-lifecycle`: Upfront analysis, in-project docs, task breakdown, sequential execution, and .gitignore protection.
 
 *See [docs/WORKFLOWS.md](docs/WORKFLOWS.md) for the complete guide.*
 
-### 4. Standardized Prompts Library (19 Prompts in `prompts/`)
-All 19 prompts across 10 categories enforce the canonical 9-section context specification:
+### 4. Standardized Prompts Library (20 Prompts in `prompts/`)
+All 20 prompts across 10 categories enforce the canonical 9-section context specification:
 `PROJECT CONTEXT` | `OBJECTIVE` | `EXISTING BEHAVIOR` | `REQUIRED INVESTIGATION` | `CONSTRAINTS` | `ACCEPTANCE CRITERIA` | `EDGE CASES` | `TESTING REQUIREMENTS` | `EXPECTED OUTPUT`.
 
 Categories:
@@ -189,19 +199,21 @@ Categories:
 - **Deployment**: `production-setup-prompt.md`, `monitoring-prompt.md`, `final-audit-prompt.md`
 - **Feature Development**: `feature-prompt.md`, `auth-prompt.md`, `database-backend-prompt.md`
 - **Performance**: `performance-optimization-prompt.md`, `algorithmic-efficiency-review.md`
-- **Project Planning**: `prd-prompt.md`
+- **Project Planning**: `prd-prompt.md`, `task-breakdown-prompt.md`
 - **Security**: `security-hardening-prompt.md`
 - **Testing**: `testing-qa-prompt.md`, `real-data-integrity-audit.md`
 - **UI/UX**: `design-prompt.md`, `ui-redesign-prompt.md`, `design-consistency-audit.md`, `navigation-icon-audit.md`
 
-### 5. Project Templates (11 Templates in `templates/`)
+### 5. Project Templates (13 Templates in `templates/`)
 - `PRD.md`: Product Requirements Document template.
+- `TRD.md`: Technical Requirements Document template.
 - `ARCHITECTURE.md`: Architecture blueprint and system boundaries.
 - `DESIGN.md`: Complete Design System tokens specification (13 color roles, typography, spacing).
 - `DATABASE.md`: Schema, tables, relations, and indexing plan.
 - `API.md`: REST/GraphQL contracts, endpoints, and error models.
-- `TASKS.md`: Project execution roadmap with checklist tracking.
+- `TASKS.md`: Project execution roadmap with 13-field task specification schema.
 - `TEST_PLAN.md`: Test strategy, coverage targets, and test matrices.
+- `IMPLEMENTATION_PLAN.md`: Phase roadmap, milestones, and deliverables.
 - `SECURITY.md`: Security controls, secret management, and threat model.
 - `DECISIONS.md`: Architecture Decision Records (ADR).
 - `MEMORY.md`: Long-term project memory and agent state.
@@ -250,8 +262,9 @@ The Flutter Agent Kit provides enterprise-grade Windows desktop capabilities:
 | [`docs/NAVIGATION_AND_ICON_STANDARDS.md`](docs/NAVIGATION_AND_ICON_STANDARDS.md) | 3–5 destinations rule, icon clarity, and 10-point navigation checklist |
 | [`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`](docs/PERFORMANCE_ENGINEERING_STANDARDS.md) | Big-O complexity, pure builds, isolate concurrency, and 15-point checklist |
 | [`docs/WINDOWS_DEVELOPMENT.md`](docs/WINDOWS_DEVELOPMENT.md) | Win32 single-instance mutex, DPI awareness, tray, and MSIX packaging |
-| [`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md) | Complete index and matrix of all 34 specialized skills |
-| [`docs/WORKFLOWS.md`](docs/WORKFLOWS.md) | Complete directory and trigger conditions for all 24 workflows |
+| [`docs/TASK_MANAGEMENT_STANDARDS.md`](docs/TASK_MANAGEMENT_STANDARDS.md) | Task breakdown, in-project documentation, sequential execution & .gitignore protection |
+| [`docs/SKILLS_CATALOG.md`](docs/SKILLS_CATALOG.md) | Complete index and matrix of all 35 specialized skills |
+| [`docs/WORKFLOWS.md`](docs/WORKFLOWS.md) | Complete directory and trigger conditions for all 25 workflows |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System architecture blueprint and dependency relationships |
 | [`docs/SKILL_SYSTEM_AUDIT.md`](docs/SKILL_SYSTEM_AUDIT.md) | Comprehensive audit report covering all skills, workflows, and rules |
 | [`docs/FINAL_QUALITY_AUDIT.md`](docs/FINAL_QUALITY_AUDIT.md) | Formal quality certification & production launch audit |
