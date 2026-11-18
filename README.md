@@ -1,11 +1,11 @@
 # Flutter Agent Kit 🚀
 
-[![Release: v2.5.0](https://img.shields.io/badge/Release-v2.5.0-blue.svg)](CHANGELOG.md)
+[![Release: v2.6.0](https://img.shields.io/badge/Release-v2.6.0-blue.svg)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Flutter: 3.x](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter)](https://flutter.dev)
 [![Dart: 3.x](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)](https://dart.dev)
 [![Platform: Windows | macOS | Linux | Android | iOS | Web](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android%20%7C%20iOS%20%7C%20Web-blue)]()
-[![Validation: 100% Pass](https://img.shields.io/badge/Validation-100%25%20Passed%20(103%2F103)-brightgreen.svg)](docs/FINAL_QUALITY_AUDIT.md)
+[![Validation: 100% Pass](https://img.shields.io/badge/Validation-100%25%20Passed%20(115%2F115)-brightgreen.svg)](docs/FINAL_QUALITY_AUDIT.md)
 [![Agent Ready](https://img.shields.io/badge/AI%20Agents-Cursor%20%7C%20Claude%20%7C%20Gemini%20%7C%20Copilot%20%7C%20Codex-purple.svg)](docs/AGENT_COMPATIBILITY.md)
 
 A universal, production-ready engineering knowledge framework and operational toolkit that empowers AI coding assistants (**Cursor**, **Claude Code**, **Gemini CLI**, **GitHub Copilot**, **OpenAI Codex**, **Antigravity**) to architect, build, debug, optimize, review, and release high-performance Flutter and Dart applications with zero hallucinations, zero dummy data, and strict software craftsmanship.
@@ -107,12 +107,13 @@ The Flutter Agent Kit embeds five mandatory invariant systems across all agent e
 - **Image Decodes & Isolates**: Constrain decoded bitmaps with `cacheWidth`/`cacheHeight` factoring in DPR. Offload CPU-heavy operations ($> 8\,\text{ms}$) to `Isolate.run()`.
 - *Specification*: [`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`](docs/PERFORMANCE_ENGINEERING_STANDARDS.md) | Skill: `skills/performance-engineering/` | Workflow: `workflows/performance-audit/`
 
-### 5. Task Management, In-Project Documentation & Incremental Execution
-- **Plan First, Document Second, Implement Incrementally**: Never attempt to complete a large software project in one massive coding operation.
-- **Hierarchical Task Breakdown**: Decompose requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md` with explicit statuses.
-- **Sequential Execution Loop**: Execute one task at a time; verify acceptance criteria and test coverage before moving to the next task.
-- **In-Project Documentation Only**: All planning documents live inside `docs/` and `tasks/` in the project root. Never create global or temporary files.
-- **Mandatory GitHub Protection**: Private AI documentation and task registries are excluded from Git via `.gitignore`.
+### 5. Mandatory 15-Phase SDLC, Task Management & Documentation Architecture
+- **Mandatory 15-Phase SDLC as Default**: The 15-phase SDLC ($\text{Idea \& Research} \to \text{PRD \& Requirements} \to \text{User Flow} \to \text{Wireframe \& UI/UX} \to \text{Design System} \to \text{Technical Architecture} \to \text{Database \& API Design} \to \text{Task Breakdown} \to \text{Project Setup} \to \text{Development} \to \text{Integration} \to \text{Testing \& QA} \to \text{Security \& Optimization} \to \text{Deployment} \to \text{Monitoring \& Maintenance}$) is the default development lifecycle for all new projects and major feature builds.
+- **Hierarchical Task Breakdown & 13-Field Schema**: Decompose requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md`. Every task defines 13 mandatory schema fields (ID, title, description, objective, requirements, affected files, dependencies, steps, acceptance criteria, testing requirements, expected outcome, priority, status) across 5 valid statuses (`Not Started`, `In Progress`, `Blocked`, `Testing`, `Completed`).
+- **Sequential 10-Step Execution Loop**: In Phase 10 (Development), execute strictly one task at a time: $\text{READ} \to \text{UNDERSTAND} \to \text{PLAN} \to \text{IMPLEMENT} \to \text{TEST} \to \text{REVIEW} \to \text{FIX} \to \text{DOCUMENT} \to \text{VERIFY} \to \text{MARK COMPLETED}$.
+- **12-Point Completion Checklist & 7-Step Remediation**: Tasks must satisfy all 12 completion criteria before being marked `Completed`. If tests fail, follow the 7-step root-cause isolation and minimal fix protocol.
+- **In-Project Documentation Only**: All 20 project planning templates (`PROJECT_OVERVIEW.md`, `RESEARCH.md`, `PRD.md`, `TRD.md`, `USER_FLOW.md`, `SCREEN_LIST.md`, `WIREFRAME.md`, `UI_UX_SPECIFICATION.md`, `DESIGN.md`, `ARCHITECTURE.md`, `TECH_STACK.md`, `DATABASE.md`, `API.md`, `TASKS.md`, `IMPLEMENTATION_PLAN.md`, etc.) reside inside `docs/` and `tasks/` in the project root. Never create global or temporary files.
+- **Mandatory Git Protection**: Private AI planning documentation (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) is protected via `.gitignore`. Public docs (`README.md`, `LICENSE`, `CHANGELOG.md`, `AGENTS.md`) remain tracked.
 - *Specification*: [`docs/TASK_MANAGEMENT_STANDARDS.md`](docs/TASK_MANAGEMENT_STANDARDS.md) | Skill: `skills/task-management/` | Workflow: `workflows/task-lifecycle/`
 
 ---
@@ -287,7 +288,7 @@ The Flutter Agent Kit provides enterprise-grade Windows desktop capabilities:
 The kit includes automated validation tools that verify file integrity, skill manifests, YAML frontmatter, workflow completeness, and internal markdown link integrity:
 
 ```powershell
-# 1. PowerShell Master Validator (103 files verified, 0 failures)
+# 1. PowerShell Master Validator (115 files verified, 0 failures)
 powershell -ExecutionPolicy Bypass -File scripts\PowerShell\validate-kit.ps1
 
 # 2. Dart Structure & Manifest Integrity Validator
@@ -320,21 +321,35 @@ Copy or link the entry file matching your AI coding assistant into your Flutter 
 - For **OpenAI Codex / Antigravity**: `AGENTS.md`
 
 ### Step 2: Onboard Your Agent
+
+#### For New Projects (Greenfield):
+Prompt your agent to follow the mandatory 15-Phase SDLC:
+```text
+Execute the 15-Phase SDLC workflow (workflows/task-lifecycle/WORKFLOW.md):
+1. Start with Phase 01 (Idea & Research) and author docs/PROJECT_OVERVIEW.md.
+2. Advance through Phase 02 (PRD) and Phase 05 (Design System) before implementing code.
+3. Decompose features into atomic tasks in tasks/TASKS.md using the 13-field schema (Phase 08).
+4. Implement sequentially one task at a time (Phase 10) following the 10-step loop.
+```
+
+#### For Existing Projects (Brownfield):
 Prompt your agent to analyze the project non-destructively:
 ```text
 Execute the Existing Project Analysis workflow (workflows/existing-project-analysis/WORKFLOW.md):
 1. Inspect pubspec.yaml to identify SDK constraints and dependencies.
-2. Inspect lib/ to determine the state management and architecture.
+2. Inspect lib/ to determine state management, architecture, and completed phases.
 3. Report findings in docs/MEMORY.md without modifying any application code.
+4. Resume execution from the current active phase while preserving existing code.
 ```
 
 ### Step 3: Implement with Surgical Precision
 When asking your agent to build a feature or fix a bug:
 ```text
-Implement [Feature Name] following core/change-discipline.md:
-1. Follow the feature-development workflow (workflows/feature-development/WORKFLOW.md).
-2. Adhere to the 4 UI states and the Zero Dummy Data standard.
-3. Verify your work by running `flutter analyze` and `flutter test`.
+Implement [Task ID / Feature Name] following core/change-discipline.md:
+1. Follow the 10-step execution loop: READ -> UNDERSTAND -> PLAN -> IMPLEMENT -> TEST -> REVIEW -> FIX -> DOCUMENT -> VERIFY -> MARK COMPLETED.
+2. Adhere to the 4 UI states, the Zero Dummy Data standard, and docs/DESIGN.md tokens.
+3. Satisfy the 12-point task completion checklist.
+4. Verify your work by running `flutter analyze` and `flutter test`.
 ```
 
 ---
