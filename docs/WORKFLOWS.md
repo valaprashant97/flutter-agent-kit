@@ -77,7 +77,7 @@ flowchart TD
 | **22** | [`design-consistency-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/design-consistency-audit/WORKFLOW.md) | Audits, detects, and harmonizes design drift, hardcoded styling, and theme contrast |
 | **23** | [`navigation-usability-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/navigation-usability-audit/WORKFLOW.md) | Audits icon clarity, action discoverability, a11y labels, and nav hierarchy |
 | **24** | [`performance-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-audit/WORKFLOW.md) | Audits algorithmic complexity, memory lifecycles, rebuild scopes, and isolate concurrency |
-| **25** | [`task-lifecycle`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/task-lifecycle/WORKFLOW.md) | Upfront project analysis, in-project documentation, task breakdown, sequential execution, and .gitignore protection |
+| **25** | [`task-lifecycle`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/task-lifecycle/WORKFLOW.md) | Mandatory 15-phase SDLC, in-project documentation, task breakdown, sequential execution, and .gitignore protection |
 
 ---
 

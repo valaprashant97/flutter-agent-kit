@@ -134,9 +134,16 @@ foreach ($wf in $workflows) {
 
 Write-Host "`n--- 6. Checking Templates & Prompts ---" -ForegroundColor Yellow
 $templates = @(
+    "templates\PROJECT_OVERVIEW.md",
+    "templates\RESEARCH.md",
     "templates\PRD.md",
     "templates\TRD.md",
+    "templates\USER_FLOW.md",
+    "templates\SCREEN_LIST.md",
+    "templates\WIREFRAME.md",
+    "templates\UI_UX_SPECIFICATION.md",
     "templates\ARCHITECTURE.md",
+    "templates\TECH_STACK.md",
     "templates\DESIGN.md",
     "templates\DATABASE.md",
     "templates\API.md",

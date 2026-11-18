@@ -15,14 +15,14 @@ The Agent Kit now provides:
 - **35 Production-Ready Agent Skills** (each with YAML frontmatter, canonical 12 sections, and explicit scope boundaries).
 - **25 Complete Engineering Lifecycle Workflows** (from product discovery, architecture, design system, and navigation usability to task lifecycle, performance audits, real data audits, and release preparation).
 - **A Single Source of Truth for Engineering Standards** (`core/engineering-standards.md`) perfectly synchronized across all 5 AI agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`).
-- **Professional Task Management & In-Project Documentation System** (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`, `workflows/task-lifecycle/`, `templates/TRD.md`, `templates/IMPLEMENTATION_PLAN.md`).
+- **Mandatory 15-Phase SDLC & In-Project Documentation System** (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`, `workflows/task-lifecycle/`, `templates/TRD.md`, `templates/IMPLEMENTATION_PLAN.md`).
 - **Zero Dummy Data & Real Data Integrity System** (`docs/REAL_DATA_INTEGRITY.md`, `skills/real-data-integrity/`, `workflows/real-data-audit/`).
 - **Global Design Consistency System** (`docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/`, `workflows/design-consistency-audit/`).
 - **Navigation Clarity, Icon Usability & Action Discoverability System** (`docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/`, `workflows/navigation-usability-audit/`).
 - **Advanced Performance Engineering & Algorithmic Efficiency System** (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/`, `workflows/performance-audit/`).
 - **Windows Desktop Enterprise Hardening** (Win32 single-instance mutex and Per-Monitor V2 DPI awareness in C++ runner).
 - **Standardized 9-Section Prompts Library** (20 prompts across 10 engineering categories).
-- **Project Planning & Governance Templates** (13 templates including PRD, TRD, ARCHITECTURE, DESIGN, TASKS, MEMORY, IMPLEMENTATION_PLAN).
+- **Project Planning & Governance Templates** (20 templates including PROJECT_OVERVIEW, RESEARCH, PRD, TRD, USER_FLOW, SCREEN_LIST, WIREFRAME, UI_UX_SPECIFICATION, ARCHITECTURE, TECH_STACK, DESIGN, DATABASE, API, TASKS, MEMORY, IMPLEMENTATION_PLAN).
 - **Automated Quality & Validation Suite** executing PowerShell and Dart verification layers with 100% passing checks and 0 broken links.
 
 ---
@@ -49,7 +49,7 @@ The Agent Kit now provides:
 | **AUD-016** | **HIGH** | Navigation Clarity, Icon Usability & Discoverability | Created `docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/SKILL.md`, `workflows/navigation-usability-audit/WORKFLOW.md`, and `prompts/ui-ux/navigation-icon-audit.md`. Enforced 3–5 destinations and 10-point checklist. | Invariant embedded across all agent entry points. |
 | **AUD-017** | **HIGH** | Advanced Performance Engineering & Algorithmic Efficiency | Created `docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/SKILL.md`, `workflows/performance-audit/WORKFLOW.md`, and `prompts/performance/algorithmic-efficiency-review.md`. Enforced Big-O annotations and 15-point checklist. | Invariant embedded across all agent entry points. |
 | **AUD-018** | **MEDIUM** | Performance Scope & Workflow Ambiguity Resolution | Differentiated `performance` (DevTools profiling & frame jank) vs `performance-engineering` (algorithmic Big-O & memory lifecycles); updated `workflows/performance-review/WORKFLOW.md` as quick fix vs full audit. | Cross-referenced in manifests and `docs/SKILL_SYSTEM_AUDIT.md`. |
-| **AUD-019** | **CRITICAL** | Professional Task Management, Documentation & Incremental Development | Authored `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, `workflows/task-lifecycle/WORKFLOW.md`, `prompts/project-planning/task-breakdown-prompt.md`, `templates/TRD.md`, `templates/IMPLEMENTATION_PLAN.md`, configured mandatory `.gitignore` protection block, and created universal skill in `~/.gemini/config/skills/software-engineering-workflow/`. | 13-field task schema, 5 statuses, 12-step execution loop, 108 files validated. |
+| **AUD-019** | **CRITICAL** | Mandatory 15-Phase SDLC, Task Management & Documentation | Authored `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, `workflows/task-lifecycle/WORKFLOW.md`, `prompts/project-planning/task-breakdown-prompt.md`, 20 project planning templates, configured mandatory `.gitignore` protection block, and created universal skill in `~/.gemini/config/skills/software-engineering-workflow/`. | 15-phase SDLC, 13-field task schema, 5 statuses, 10-step execution loop, 115 files validated. |
 
 ---
 
@@ -112,11 +112,11 @@ Found 25 workflows in D:\Flutter\Flutter Agent-Kit\flutter-agent-kit\workflows
  [PASS] 25/25 Workflows Validated with Entry Conditions, Procedures & Exit Criteria
 
 --- 6. Checking Templates & Prompts ---
- [PASS] 13/13 Templates Validated
+ [PASS] 20/20 Templates Validated
  [PASS] 20/20 Prompts Validated with 9 Canonical Sections
 
 ==================================================
-  Validation Summary: All Checks Passed (0 Failures) 
+  Validation Summary: 115 Files Checked (0 Failures) 
 ==================================================
 
 Running Flutter Agent Kit Dart Structure Validator...

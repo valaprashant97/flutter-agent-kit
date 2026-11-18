@@ -95,13 +95,13 @@ When developing for Windows Desktop:
 
 ---
 
-## 8. Task Management, In-Project Documentation & Incremental Execution Invariants
+## 8. Mandatory 15-Phase SDLC & Task Management Invariants
 
-- **The Golden Rule**: $\text{Plan First} \to \text{Document Second} \to \text{Break Down Work} \to \text{One Task at a Time} \to \text{Test \& Verify} \to \text{Update Docs} \to \text{Next Task}$. Never attempt to complete a large software project in one massive coding operation.
-- **Hierarchical Task Breakdown**: Decompose large requirements into Project $\to$ Modules $\to$ Features $\to$ Phases $\to$ Tasks in `tasks/TASKS.md`. Every task must define the 13 schema fields and have an explicit status (`Not Started`, `In Progress`, `Blocked`, `Testing`, `Completed`).
-- **Sequential Execution Loop**: Work strictly sequentially on one implementation task. Prerequisite tasks must be completed before starting dependent tasks. A task is completed only when acceptance criteria are verified.
-- **In-Project Documentation Only**: Store all project documentation inside `docs/` and `tasks/` in the project root. Never create project documents in global or temporary directories.
-- **Mandatory GitHub Protection**: All private AI-generated planning documents (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) must be excluded from public Git remotes via `.gitignore`.
+- **Default 15-Phase Development Lifecycle**: The 15-phase SDLC ($\text{Idea \& Research} \to \text{PRD \& Requirements} \to \text{User Flow} \to \text{Wireframe \& UI/UX} \to \text{Design System} \to \text{Technical Architecture} \to \text{Database \& API Design} \to \text{Task Breakdown} \to \text{Project Setup} \to \text{Development} \to \text{Integration} \to \text{Testing \& QA} \to \text{Security \& Optimization} \to \text{Deployment} \to \text{Monitoring \& Maintenance}$) is the **DEFAULT** development workflow for all new software projects and major product development tasks.
+- **Never Implement in One Operation**: Large requirements must be planned across phases and decomposed into independent atomic tasks in `tasks/TASKS.md` with the 13-field schema before writing code.
+- **Sequential Task Execution Loop**: In Phase 10 (Development), work strictly sequentially on one implementation task: $\text{READ} \to \text{UNDERSTAND} \to \text{PLAN} \to \text{IMPLEMENT} \to \text{TEST} \to \text{REVIEW} \to \text{FIX} \to \text{DOCUMENT} \to \text{VERIFY} \to \text{MARK COMPLETED}$. Prerequisite tasks must be completed before dependent tasks.
+- **In-Project Documentation Only**: Store all project documentation (`PROJECT_OVERVIEW.md`, `RESEARCH.md`, `PRD.md`, `TRD.md`, `USER_FLOW.md`, `SCREEN_LIST.md`, `WIREFRAME.md`, `UI_UX_SPECIFICATION.md`, `DESIGN.md`, `ARCHITECTURE.md`, `TECH_STACK.md`, `DATABASE.md`, `API.md`, `TEST_PLAN.md`, `SECURITY.md`, `DECISIONS.md`, `MEMORY.md`, `CHANGELOG.md`, `TASKS.md`) inside `docs/` and `tasks/` in the project root. Never create project documents in global or temporary directories.
+- **Mandatory GitHub Protection**: Private AI-generated planning documents (`/docs/`, `/tasks/`, `/MEMORY.md`, `/DECISIONS.md`, `/IMPLEMENTATION_PLAN.md`) must be excluded from public Git remotes via `.gitignore`. Public docs (`README.md`, `LICENSE`, `CHANGELOG.md`, `AGENTS.md`) remain tracked.
 - **12-Point Completion Checklist**: Pass every item of the Task Completion Checklist before marking a task `Completed`.
 - **Failed Task Protocol**: Diagnose the root cause, inspect logs, apply the smallest safe fix, and retest. Never suppress errors or fake test results.
 - **Reference**: Consult `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.

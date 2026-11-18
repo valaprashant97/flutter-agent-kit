@@ -27,7 +27,7 @@ To prevent documentation drift and conflicting instructions across agent types:
    - **Global Design Consistency** (`docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/`)
    - **Navigation Clarity & Discoverability** (`docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/`)
    - **Performance Engineering & Algorithmic Efficiency** (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/`)
-   - **Task Management & Incremental Development** (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`)
+   - **Mandatory 15-Phase SDLC & Task Management** (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`, `workflows/task-lifecycle/`)
 4. **Lightweight Entry Points**:
    - `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md` contain concise routing instructions pointing to the shared layers.
    - Cursor's `.cursor/rules/` files use YAML frontmatter globs (`globs: ["lib/**/*.dart"]`) to load targeted rules only when relevant files are edited.

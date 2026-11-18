@@ -36,7 +36,7 @@ The **Flutter Agent Kit** provides a battle-tested, structured engineering syste
 8. **Advanced Performance Engineering**: Algorithmic complexity analysis ($O(1)$ lookups, `StringBuffer`, lazy evaluations), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`).
 9. **First-Class Windows Desktop Support**: Win32 single-instance mutex, Per-Monitor V2 DPI awareness, system tray utilities, window state machine precision, and signed MSIX packaging (`docs/WINDOWS_DEVELOPMENT.md`).
 10. **Deterministic Proof of Work**: Mandatory verification via real CLI tools (`flutter analyze`, `flutter test`) with zero fabricated passes (`core/verification-policy.md`).
-11. **Professional Task Management & Incremental Development**: Enforcing the golden rule: Plan first, document second, break down work, implement one task at a time, test, verify, update documentation, then move to the next task (`docs/TASK_MANAGEMENT_STANDARDS.md`).
+11. **Mandatory 15-Phase SDLC & Task Management**: Enforcing the 15-phase SDLC as the default lifecycle: $\text{Idea \& Research} \to \text{PRD} \to \text{User Flow} \to \text{Wireframe} \to \text{Design} \to \text{Architecture} \to \text{DB \& API} \to \text{Tasks} \to \text{Setup} \to \text{Development} \to \text{Integration} \to \text{Testing} \to \text{Security} \to \text{Deployment} \to \text{Maintenance}$ (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 
 ---
 
@@ -65,9 +65,9 @@ graph TD
     
     subgraph Execution ["Tooling, Context & Verification"]
         Workflows --> Prompts["20 Canonical Prompts<br>(Standard 9-Section Specification)"]
-        Workflows --> Templates["13 Architecture Templates<br>(PRD, TRD, Architecture, Design, Database, API, etc.)"]
+        Workflows --> Templates["20 Architecture Templates<br>(Overview, Research, PRD, TRD, User Flow, Wireframes, etc.)"]
         Skills --> CLI["CLI Verification Tools<br>(flutter analyze, flutter test, flutter run)"]
-        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 103+ Files Checked, 0 Failures)"]
+        Core --> Validation["Automated Validation Suite<br>(PowerShell & Dart - 115 Files Checked, 0 Failures)"]
     end
 ```
 
@@ -204,18 +204,25 @@ Categories:
 - **Testing**: `testing-qa-prompt.md`, `real-data-integrity-audit.md`
 - **UI/UX**: `design-prompt.md`, `ui-redesign-prompt.md`, `design-consistency-audit.md`, `navigation-icon-audit.md`
 
-### 5. Project Templates (13 Templates in `templates/`)
-- `PRD.md`: Product Requirements Document template.
-- `TRD.md`: Technical Requirements Document template.
-- `ARCHITECTURE.md`: Architecture blueprint and system boundaries.
-- `DESIGN.md`: Complete Design System tokens specification (13 color roles, typography, spacing).
-- `DATABASE.md`: Schema, tables, relations, and indexing plan.
-- `API.md`: REST/GraphQL contracts, endpoints, and error models.
-- `TASKS.md`: Project execution roadmap with 13-field task specification schema.
-- `TEST_PLAN.md`: Test strategy, coverage targets, and test matrices.
-- `IMPLEMENTATION_PLAN.md`: Phase roadmap, milestones, and deliverables.
-- `SECURITY.md`: Security controls, secret management, and threat model.
-- `DECISIONS.md`: Architecture Decision Records (ADR).
+### 5. Project Templates (20 Templates in `templates/`)
+- `PROJECT_OVERVIEW.md`: Product vision, target audience, value proposition, and MVP scope (Phase 01).
+- `RESEARCH.md`: Competitive analysis, market/technical feasibility research (Phase 01).
+- `PRD.md`: Product Requirements Document template (Phase 02).
+- `TRD.md`: Technical Requirements Document template (Phase 02).
+- `USER_FLOW.md`: Navigation state machine, screen transitions, and user journeys (Phase 03).
+- `SCREEN_LIST.md`: Inventory of all application screens, routes, and modal surfaces (Phase 03).
+- `WIREFRAME.md`: Structural layout wireframes for all major screens and modals (Phase 04).
+- `UI_UX_SPECIFICATION.md`: Interaction specifications, gesture behaviors, and accessibility (Phase 04).
+- `DESIGN.md`: Complete Design System tokens specification (13 color roles, typography, spacing) (Phase 05).
+- `ARCHITECTURE.md`: Architecture blueprint and system boundaries (Phase 06).
+- `TECH_STACK.md`: Technology stack decision and trade-off analysis matrix (Phase 06).
+- `DATABASE.md`: Schema, tables, relations, and indexing plan (Phase 07).
+- `API.md`: REST/GraphQL contracts, endpoints, and error models (Phase 07).
+- `TASKS.md`: Project execution roadmap with 13-field task specification schema (Phase 08).
+- `IMPLEMENTATION_PLAN.md`: Phase roadmap, milestones, and deliverables (Phase 08).
+- `TEST_PLAN.md`: Test strategy, coverage targets, and test matrices (Phase 12).
+- `SECURITY.md`: Security controls, secret management, and threat model (Phase 13).
+- `DECISIONS.md`: Architecture Decision Records (ADRs).
 - `MEMORY.md`: Long-term project memory and agent state.
 - `.env.example`: Secure environment variables blueprint.
 
