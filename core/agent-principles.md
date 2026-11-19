@@ -100,3 +100,15 @@ $$\mathbf{Correctness} > \mathbf{Requirement\ Compliance} > \mathbf{Existing\ Co
 - **12-Point Task Completion Verification**: A task is marked `Completed` only after passing the 12-point checklist, with real test execution and static analysis cleanly passing.
 - **Failed Task Recovery Protocol**: If tests fail, stop immediately, diagnose the actual root cause, apply the smallest safe fix, and retest. Never suppress errors or fake passing tests.
 - **Reference**: See `docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/SKILL.md`, and `workflows/task-lifecycle/WORKFLOW.md`.
+
+---
+
+## 8. The Universal GitHub Repository Adaptation Invariant
+
+- **Zero Structural Assumptions**: Never assume a fixed repository name, directory hierarchy, or single-app layout. Search dynamically for `pubspec.yaml` across root and nested subdirectories (`apps/*`, `packages/*`, Melos monorepos).
+- **Prompt for Missing URLs**: If an instruction asks to operate on an external or remote repository but omits the GitHub URL, immediately prompt the user for the link. Never guess or hallucinate repository targets.
+- **Authorization & Access Gate**: Verify write authorization before attempting changes. Never push commits directly to `main`, `master`, or protected branches. Always execute work on dedicated feature/fix branches.
+- **Zero Architectural Churn**: Respect and extend the repository's established architecture (Clean Architecture, Feature-First, Layer-First, or MVC) and state management (BLoC, Riverpod, Provider, GetX, MobX, Signals, or ValueNotifier). Never force unrequested architectural rewrites.
+- **Adaptive Standards Integration**: Apply Flutter Agent Kit coding standards (sound null safety, pure `build()` methods, mounted checks, resource disposal in `dispose()`, 4 UI states) in complete harmony with existing project conventions.
+- **Isolated Pre-Flight Baseline**: Run diagnostics (`flutter pub get`, `flutter analyze`, `flutter test`) before modifying code to catalogue pre-existing issues and ensure new work introduces zero regressions.
+- **Reference**: See `docs/GITHUB_REPOSITORY_STANDARDS.md`, `skills/github-repository/SKILL.md`, and `workflows/github-repository/WORKFLOW.md`.

@@ -65,3 +65,32 @@ If a project's architecture is ambiguous or mixed:
 2. If multiple conflicting patterns exist, ask the user a single, concise clarification question:
    > *"I noticed this project contains both Provider and BLoC. Should new work on [Feature] follow the BLoC pattern established in `lib/features/auth` or the Provider pattern in `lib/features/settings`?"*
 3. Never silently refactor an entire application from one state management library to another.
+
+---
+
+## 4. GitHub Repository & Arbitrary Codebase Discovery Protocol
+
+When tasked with working on an external or remote GitHub repository:
+
+### 4.1 URL Ingestion & Missing URL Handling
+- If a GitHub repository URL is provided, validate and parse the target repository.
+- **If no URL is provided**: Immediately ask the user for the repository link before attempting any actions. Never guess or hallucinate repository links.
+
+### 4.2 Authorization & Branch Protection
+- Confirm write authorization. If access is read-only, plan changes locally as reviewable diffs or patches.
+- Never commit or push directly to `main`, `master`, or release branches. Always work on an isolated feature/fix branch (`git checkout -b feat/<task-name>`).
+
+### 4.3 Flexible Flutter Root Discovery
+- Never assume `pubspec.yaml` is in the repository root.
+- Recursively locate all `pubspec.yaml` files to support monorepos (`apps/*`, `packages/*`) and Melos workspaces.
+- Execute all Flutter and Dart tools from the detected Flutter project root directory.
+
+### 4.4 Automated Profiling & Pre-Flight Baseline
+- Audit Dart SDK constraint, state management, dependencies, routing, and linter settings (`analysis_options.yaml`).
+- Run baseline diagnostics (`flutter pub get`, `flutter analyze`, `flutter test`) to catalog pre-existing warnings before introducing changes.
+- Record baseline findings in `docs/MEMORY.md`.
+
+### 4.5 Adaptive Standards Application
+- Preserve existing architecture and state management; do not force unrequested rewrites.
+- Apply Flutter Agent Kit coding standards (sound null safety, pure `build()`, 4 UI states, mounted checks, resource disposal) within the established project conventions.
+- Reference: `docs/GITHUB_REPOSITORY_STANDARDS.md`, `skills/github-repository/`, and `workflows/github-repository/`.

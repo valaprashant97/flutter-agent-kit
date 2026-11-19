@@ -21,8 +21,9 @@ This document defines how the **Flutter Agent Kit** provides cross-agent interop
 
 To prevent documentation drift and conflicting instructions across agent types:
 1. **Zero Knowledge Duplication**: The core rules, engineering standards, and procedures live exclusively in `core/` (7 core files), `rules/` (51 domain rules), `skills/` (35 specialized skills), and `workflows/` (25 structured workflows).
-2. **Standardized Catalogs**: Agents reference [`docs/SKILLS_CATALOG.md`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/docs/SKILLS_CATALOG.md) (35 skills index) and [`docs/WORKFLOWS.md`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/docs/WORKFLOWS.md) (25 workflows index) instead of hardcoding procedure lists.
-3. **Core Invariants Alignment**: All agent entry points align around the 5 core invariant systems:
+2. **Standardized Catalogs**: Agents reference [`docs/SKILLS_CATALOG.md`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/docs/SKILLS_CATALOG.md) (37 skills index) and [`docs/WORKFLOWS.md`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/docs/WORKFLOWS.md) (26 workflows index) instead of hardcoding procedure lists.
+3. **Core Invariants Alignment**: All agent entry points align around the 6 core invariant systems:
+   - **GitHub Repository Ingestion & Adaptation Protocol** (`docs/GITHUB_REPOSITORY_STANDARDS.md`, `skills/github-repository/`)
    - **Real Data Integrity & Zero Dummy Data** (`docs/REAL_DATA_INTEGRITY.md`, `skills/real-data-integrity/`)
    - **Global Design Consistency** (`docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/`)
    - **Navigation Clarity & Discoverability** (`docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/`)

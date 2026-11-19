@@ -12,9 +12,10 @@
 A comprehensive, multi-phase audit and production-readiness upgrade of the **Flutter Agent Kit** has been executed. All initial findings from the Phase 1 audit (`docs/AGENT_KIT_AUDIT.md`), together with subsequent architecture expansions and the comprehensive Skill System Audit (`docs/SKILL_SYSTEM_AUDIT.md`), have been systematically implemented, verified, and certified via automated test suites. The reference repository (`D:\Flutter\Flutter Agent-Kit\reference`) remained strictly read-only throughout.
 
 The Agent Kit now provides:
-- **35 Production-Ready Agent Skills** (each with YAML frontmatter, canonical 12 sections, and explicit scope boundaries).
-- **25 Complete Engineering Lifecycle Workflows** (from product discovery, architecture, design system, and navigation usability to task lifecycle, performance audits, real data audits, and release preparation).
-- **A Single Source of Truth for Engineering Standards** (`core/engineering-standards.md`) perfectly synchronized across all 5 AI agent entry points (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`).
+- **37 Production-Ready Agent Skills** (each with YAML frontmatter, canonical 12 sections, and explicit scope boundaries, including `skills/coding-standards/` and `skills/github-repository/`).
+- **26 Complete Engineering Lifecycle Workflows** (including `workflows/github-repository/`, product discovery, architecture, design system, navigation usability, task lifecycle, performance audits, real data audits, and release preparation).
+- **A Single Source of Truth for Engineering Standards** (`core/engineering-standards.md`) and **Shared Coding Standards** (`docs/FLUTTER_CODING_STANDARDS.md`).
+- **GitHub Repository Ingestion & Adaptive Development System** (`docs/GITHUB_REPOSITORY_STANDARDS.md`, `skills/github-repository/`, `workflows/github-repository/`).
 - **Mandatory 15-Phase SDLC & In-Project Documentation System** (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`, `workflows/task-lifecycle/`, `templates/TRD.md`, `templates/IMPLEMENTATION_PLAN.md`).
 - **Zero Dummy Data & Real Data Integrity System** (`docs/REAL_DATA_INTEGRITY.md`, `skills/real-data-integrity/`, `workflows/real-data-audit/`).
 - **Global Design Consistency System** (`docs/DESIGN_SYSTEM_STANDARDS.md`, `skills/design-system/`, `workflows/design-consistency-audit/`).
