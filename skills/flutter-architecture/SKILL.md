@@ -91,7 +91,8 @@ class CartRepositoryImpl implements CartRepository {
 - Code compiles cleanly with zero warnings.
 
 ## 12. Related Skills
-- `project-analysis`
-- `state-management`
-- `api-integration`
-- `database-integration`
+- `coding-standards` — 8-step AI workflow and 12 coding standard areas (read first)
+- `project-analysis` — Non-destructive codebase audit before architecture changes
+- `state-management` — BLoC / Riverpod / Provider selection and patterns
+- `api-integration` — Dio, repository implementation, error mapping
+- `database-integration` — Drift, Hive, Isar, migrations

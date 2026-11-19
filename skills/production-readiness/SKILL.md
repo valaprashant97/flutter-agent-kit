@@ -61,6 +61,7 @@ flutter build windows --release
 - Release candidate compiles with zero errors.
 
 ## 12. Related Skills
+- `coding-standards` — Production Readiness (Section 12) of `docs/FLUTTER_CODING_STANDARDS.md`
 - `real-data-integrity`
 - `packaging`
 - `security-audit`

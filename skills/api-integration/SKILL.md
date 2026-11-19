@@ -70,6 +70,7 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource {
 - Unit tests verify happy path and error scenarios.
 
 ## 12. Related Skills
+- `coding-standards` — Database & API Standards (Section 5) of `docs/FLUTTER_CODING_STANDARDS.md`
 - `real-data-integrity`
 - `error-handling`
 - `flutter-architecture`

@@ -105,6 +105,7 @@ class ProductListScreen extends StatelessWidget {
 - 13-point design checklist fully verified.
 
 ## 12. Related Skills
+- `coding-standards` — 8-step AI workflow; Widget Standards (Section 3) and Code Quality (Section 10) of `docs/FLUTTER_CODING_STANDARDS.md`
 - `real-data-integrity`
 - `design-system`
 - `responsive-design`

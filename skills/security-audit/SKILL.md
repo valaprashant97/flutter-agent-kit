@@ -65,6 +65,7 @@ const secureStorage = FlutterSecureStorage(
 - Release configuration verified for obfuscation and transport security.
 
 ## 12. Related Skills
+- `coding-standards` — Security Standards (Section 8) of `docs/FLUTTER_CODING_STANDARDS.md`
 - `code-review`
 - `authentication`
 - `packaging`

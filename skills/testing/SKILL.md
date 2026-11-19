@@ -109,6 +109,7 @@ void main() {
 - All test suites execute cleanly and deterministically with 0 failures.
 
 ## 12. Related Skills
+- `coding-standards` — Testing Standards (Section 9) of `docs/FLUTTER_CODING_STANDARDS.md`; 8-step AI workflow Step 5 (TEST)
 - `real-data-integrity`
 - `golden-testing`
 - `debugging`

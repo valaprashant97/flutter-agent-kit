@@ -1,13 +1,14 @@
 # Flutter Agent Kit: Skills Catalog
 
-This catalog provides a comprehensive index of all 35 specialized skills included in the **Flutter Agent Kit**. Each skill is packaged in a self-contained directory under `skills/<skill-name>/` and adheres strictly to the open Agent Skills specification with YAML frontmatter and the 12 canonical sections.
+This catalog provides a comprehensive index of all 36 specialized skills included in the **Flutter Agent Kit**. Each skill is packaged in a self-contained directory under `skills/<skill-name>/` and adheres strictly to the open Agent Skills specification with YAML frontmatter and the 12 canonical sections.
 
 ---
 
-## Skills Index & Matrix (35 Production Skills)
+## Skills Index & Matrix (36 Production Skills)
 
 | Category | Skill Directory | Primary Trigger & Purpose |
 | :--- | :--- | :--- |
+| **Standards** | [`coding-standards`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/coding-standards/SKILL.md) | 8-step Mandatory AI Development Workflow; shared Flutter & Dart coding standards reference (`docs/FLUTTER_CODING_STANDARDS.md`) |
 | **Discovery** | [`project-analysis`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/project-analysis/SKILL.md) | Non-destructive audit of existing codebase, dependencies, and patterns |
 | **Task Lifecycle** | [`task-management`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/task-management/SKILL.md) | Mandatory 15-phase SDLC, hierarchical task breakdown, in-project documentation, sequential execution, and .gitignore protection |
 | **Architecture** | [`flutter-architecture`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/skills/flutter-architecture/SKILL.md) | Layered Clean Architecture, feature-first modularization, service layer |
