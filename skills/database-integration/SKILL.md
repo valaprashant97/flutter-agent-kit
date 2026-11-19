@@ -90,6 +90,7 @@ LazyDatabase _openConnection() {
 - Migrations pass validation tests.
 
 ## 12. Related Skills
+- `coding-standards` — Database & API Standards (Section 5) of `docs/FLUTTER_CODING_STANDARDS.md`
 - `real-data-integrity`
 - `flutter-architecture`
 - `api-integration`

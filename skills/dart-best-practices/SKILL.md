@@ -73,6 +73,7 @@ String describeResult(PaymentResult result) => switch (result) {
 - Passes static analysis with 0 warnings.
 
 ## 12. Related Skills
-- `flutter-architecture`
-- `code-review`
-- `debugging`
+- `coding-standards` — Full Dart Standards reference in Section 1 of `docs/FLUTTER_CODING_STANDARDS.md`
+- `flutter-architecture` — Clean Architecture and feature-first folder structure
+- `code-review` — Severity-based review triage for Dart quality issues
+- `debugging` — Root cause isolation and stacktrace symbolization

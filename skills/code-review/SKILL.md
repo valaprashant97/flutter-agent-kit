@@ -71,6 +71,7 @@ Navigator.of(context).pushReplacementNamed('/dashboard');
 - Clear, actionable code fixes provided for all identified issues.
 
 ## 12. Related Skills
+- `coding-standards` — Primary standards reference for code-review criteria (`docs/FLUTTER_CODING_STANDARDS.md`)
 - `navigation-clarity`
 - `performance-engineering`
 - `security-audit`
