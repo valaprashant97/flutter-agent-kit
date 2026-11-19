@@ -28,6 +28,7 @@ Establishes a **single shared reference** for all Flutter & Dart coding standard
 - `pubspec.yaml` — Dart SDK version, dependencies, platform targets
 - `analysis_options.yaml` — lint rules and severity configuration
 - `docs/FLUTTER_CODING_STANDARDS.md` — comprehensive shared standards reference (all 12 areas)
+- `docs/GITHUB_REPOSITORY_STANDARDS.md` — GitHub repository ingestion and adaptation protocol
 - `core/engineering-standards.md` — single source of truth for architectural invariants
 
 ## 6. Step-by-Step Workflow
@@ -36,6 +37,7 @@ Every AI coding session **must** follow this 8-step Mandatory AI Development Wor
 
 ### Step 1 — INSPECT
 Read the existing project before writing a single line:
+- If a GitHub repository URL is provided: clone/access it, ask for the link if missing, and discover the Flutter root (root, `apps/*`, or `packages/*`).
 - `pubspec.yaml` (SDK version, existing dependencies, platforms)
 - Folder structure (`lib/`, `test/`, `analysis_options.yaml`)
 - Existing architecture (feature-first? layered? monolith?)
@@ -256,6 +258,7 @@ A task is complete **only** when **all** of the following are true:
 
 | Skill | Responsibility |
 | :--- | :--- |
+| `github-repository` | Remote GitHub repository ingestion, topology discovery, and adaptive development |
 | `flutter-architecture` | Clean Architecture, feature-first folder structure, dependency injection |
 | `dart-best-practices` | Idiomatic Dart 3.x — sealed types, records, switch expressions, null safety |
 | `ui-implementation` | Widget composition, 4 UI states, micro-interactions, skeletons |

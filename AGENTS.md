@@ -18,11 +18,14 @@ $$\mathbf{Correctness} > \mathbf{Requirements\ Compliance} > \mathbf{Existing\ C
 
 For every user instruction or task:
 
-1. **Understand Before Building**: Inspect the project structure, `pubspec.yaml`, dependencies, and state management before modifying any file. Read `core/project-understanding.md`.
-2. **Context Efficiency**: Gather context in concentric rings. Never read or scan the entire repository blindly. Read `core/token-efficiency.md`.
-3. **Plan the Smallest Change**: Plan surgical changes using vertical slices. Touch only what you must. Read `core/change-discipline.md`.
-4. **Follow the 8-Step AI Development Workflow**: For every coding task execute the mandatory sequence — **INSPECT → ANALYZE → PLAN → IMPLEMENT → TEST → ANALYZE CODE → REVIEW → REPORT**. Read `skills/coding-standards/SKILL.md`. Consult `docs/FLUTTER_CODING_STANDARDS.md` for all 12 coding standard areas (Dart, Architecture, Widgets, State, DB/API, Performance, Error Handling, Security, Testing, Code Quality, Desktop, Production).
-5. **Implement Resiliently**:
+1. **GitHub Repository & Codebase Ingestion**:
+   - When a GitHub repository URL is provided, ingest it, verify authorization, dynamically discover the Flutter root (root, `apps/*`, `packages/*`, or Melos workspace), and establish a pre-flight diagnostics baseline. Always work on an isolated feature branch (`feat/<name>`), never committing directly to `main`/`master`.
+   - **If an external repository task lacks a URL, ask for the GitHub link immediately.** Never guess repository targets. Read `docs/GITHUB_REPOSITORY_STANDARDS.md` and `skills/github-repository/`.
+2. **Understand Before Building**: Inspect the project structure, `pubspec.yaml`, dependencies, and state management before modifying any file. Adapt coding standards to existing architecture without forced rewrites. Read `core/project-understanding.md`.
+3. **Context Efficiency**: Gather context in concentric rings. Never read or scan the entire repository blindly. Read `core/token-efficiency.md`.
+4. **Plan the Smallest Change**: Plan surgical changes using vertical slices. Touch only what you must. Read `core/change-discipline.md`.
+5. **Follow the 8-Step AI Development Workflow**: For every coding task execute the mandatory sequence — **INSPECT → ANALYZE → PLAN → IMPLEMENT → TEST → ANALYZE CODE → REVIEW → REPORT**. Read `skills/coding-standards/SKILL.md`. Consult `docs/FLUTTER_CODING_STANDARDS.md` for all 12 coding standard areas (Dart, Architecture, Widgets, State, DB/API, Performance, Error Handling, Security, Testing, Code Quality, Desktop, Production).
+6. **Implement Resiliently**:
    - Follow sound null safety and Dart 3.x patterns (`rules/dart/`).
    - Use proper widget composition and handle the 4 mandatory UI states: Loading, Success, Empty, Error (`rules/flutter/`).
    - Enforce unified error handling: `FlutterError.onError` + `PlatformDispatcher.onError`, typed sealed failures, and user-safe error messages (`skills/error-handling/`, `rules/error-handling/`).
@@ -32,8 +35,8 @@ For every user instruction or task:
    - Enforce navigation clarity: 3–5 mobile bottom nav destinations, visible labels, unambiguous icons, action-descriptive a11y labels, and 10-point checklist (`docs/NAVIGATION_AND_ICON_STANDARDS.md`, `skills/navigation-clarity/`).
    - Enforce performance engineering: algorithmic efficiency ($O(1)$ lookups, `StringBuffer`), pure `build()` methods, `const` subtrees, granular state rebuilds, resource disposal in `dispose()`, image caching, and isolate offloading (`docs/PERFORMANCE_ENGINEERING_STANDARDS.md`, `skills/performance-engineering/`).
    - Enforce task management & incremental development: plan first, document second, break down large work in `tasks/TASKS.md`, execute one task at a time, update `MEMORY.md`, and protect private AI docs via `.gitignore` (`docs/TASK_MANAGEMENT_STANDARDS.md`, `skills/task-management/`).
-6. **Verify with Proof**: Execute relevant verification commands (`flutter analyze`, `flutter test`, or `flutter build windows --release`). Never fake verification. Read `core/verification-policy.md`.
-7. **Report Concisely**: Deliver the modified code, concise explanation of changes, verification results, and any remaining risks.
+7. **Verify with Proof**: Execute relevant verification commands (`flutter analyze`, `flutter test`, or `flutter build windows --release`). Never fake verification. Read `core/verification-policy.md`.
+8. **Report Concisely**: Deliver the modified code, concise explanation of changes, verification results, and any remaining risks.
 
 ---
 
@@ -112,7 +115,8 @@ When developing for Windows Desktop:
 ## 9. Skills, Rules & Workflows Reference (Single Source of Truth)
 
 - **Single Source of Truth Standards**: Read `core/engineering-standards.md` for coding, architecture, real data integrity, design consistency, navigation clarity, performance engineering, task management, and verification invariants.
-- **Skills Catalog**: See `docs/SKILLS_CATALOG.md` for index of all 36 specialized skills in `skills/`.
-- **Lifecycle Workflows**: Follow the 25 structured workflows in `workflows/` (PRD, Architecture, Task Lifecycle, Design System, Design Consistency Audit, Navigation Usability Audit, Performance Audit, Real Data Audit, Database, API, Auth, Feature Dev, Bug Fixing, Root Cause, Windows Desktop, QA, Release Preparation).
+- **GitHub Repository Standards**: Read `docs/GITHUB_REPOSITORY_STANDARDS.md` for working on arbitrary remote repositories, URL ingestion, authorization, dynamic topology, and adaptive coding standards.
+- **Skills Catalog**: See `docs/SKILLS_CATALOG.md` for index of all 37 specialized skills in `skills/` (including `skills/github-repository/`).
+- **Lifecycle Workflows**: Follow the 26 structured workflows in `workflows/` (including `workflows/github-repository/`, PRD, Architecture, Task Lifecycle, Design System, Design Consistency Audit, Navigation Usability Audit, Performance Audit, Real Data Audit, Database, API, Auth, Feature Dev, Bug Fixing, Root Cause, Windows Desktop, QA, Release Preparation).
 - **Rules Repository**: Follow domain rules in `rules/` (Dart, Flutter, Architecture, State Management, Database, Networking, Error Handling, Security, Testing, Performance, Platform).
 - **Project Documentation**: Maintain `docs/MEMORY.md`, `docs/DECISIONS.md`, and `tasks/TASKS.md`.

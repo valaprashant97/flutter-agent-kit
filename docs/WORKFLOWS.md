@@ -1,13 +1,17 @@
 # Flutter Agent Kit: Lifecycle Workflows Guide
 
-This guide details the 25 end-to-end engineering workflows supported by the **Flutter Agent Kit**. Each workflow represents a rigorous protocol with defined entry conditions, sequential phases, quality gates, and completion criteria.
+This guide details the 26 end-to-end engineering workflows supported by the **Flutter Agent Kit**. Each workflow represents a rigorous protocol with defined entry conditions, sequential phases, quality gates, and completion criteria.
 
 ---
 
-## Complete Engineering Lifecycle Overview (25 Workflows)
+## Complete Engineering Lifecycle Overview (26 Workflows)
 
 ```mermaid
 flowchart TD
+    GitHub([Remote GitHub Repo]) --> WF26[26. GitHub Repository Ingestion & Analysis]
+    WF26 --> WF2[2. Project Analysis]
+    WF26 --> WF9[9. Feature Development]
+
     Concept([Idea / Vision]) --> WF1[1. New Project]
     WF1 --> WF3[3. Product Requirements PRD]
     WF3 --> WF4[4. Architecture Planning]
@@ -78,6 +82,7 @@ flowchart TD
 | **23** | [`navigation-usability-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/navigation-usability-audit/WORKFLOW.md) | Audits icon clarity, action discoverability, a11y labels, and nav hierarchy |
 | **24** | [`performance-audit`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/performance-audit/WORKFLOW.md) | Audits algorithmic complexity, memory lifecycles, rebuild scopes, and isolate concurrency |
 | **25** | [`task-lifecycle`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/task-lifecycle/WORKFLOW.md) | Mandatory 15-phase SDLC, in-project documentation, task breakdown, sequential execution, and .gitignore protection |
+| **26** | [`github-repository`](file:///D:/Flutter/Flutter%20Agent-Kit/flutter-agent-kit/workflows/github-repository/WORKFLOW.md) | Ingestion, topology discovery, automated profiling, adaptive development, and verification on any GitHub repository |
 
 ---
 

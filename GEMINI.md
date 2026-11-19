@@ -43,7 +43,8 @@ flutter build windows --release
 - **Navigation & Icon Standards**: `docs/NAVIGATION_AND_ICON_STANDARDS.md` and `skills/navigation-clarity/`
 - **Performance Engineering Standards**: `docs/PERFORMANCE_ENGINEERING_STANDARDS.md` and `skills/performance-engineering/`
 - **Task Management Standards**: `docs/TASK_MANAGEMENT_STANDARDS.md` and `skills/task-management/`
+- **GitHub Repository Standards**: `docs/GITHUB_REPOSITORY_STANDARDS.md` and `skills/github-repository/`
 - **Domain Rules**: `rules/` (Dart, Flutter, Architecture, Error Handling, Testing, Platform)
-- **Actionable Skills**: `docs/SKILLS_CATALOG.md` (35 specialized skills)
-- **Lifecycle Workflows**: `docs/WORKFLOWS.md` (25 structured workflows)
+- **Actionable Skills**: `docs/SKILLS_CATALOG.md` (37 specialized skills)
+- **Lifecycle Workflows**: `docs/WORKFLOWS.md` (26 structured workflows)
 - **Windows Engineering**: `docs/WINDOWS_DEVELOPMENT.md` and `skills/windows-development/`

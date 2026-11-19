@@ -12,8 +12,8 @@ description: Non-destructive analysis and onboarding protocol for existing Flutt
 Provides a disciplined, read-only onboarding procedure for AI coding agents to discover, trace, and document an existing Flutter project's architecture, dependencies, state management patterns, and test coverage before proposing or applying code modifications.
 
 ## 3. When to Use
-- When first joining or opening an existing Flutter codebase.
-- When the user asks: "Analyze this project", "What architecture is this app using?", or "Where should I add this feature?".
+- When first joining or opening an existing Flutter codebase (local or via a GitHub repository URL).
+- When the user asks: "Analyze this project", "What architecture is this app using?", "Inspect this GitHub repo", or "Where should I add this feature?".
 - Before proposing any major architectural changes or refactoring.
 
 ## 4. When Not to Use
@@ -62,6 +62,8 @@ dart analyze
 - No source code files have been modified.
 
 ## 12. Related Skills
+- `github-repository` — Ingesting, discovering topology, and profiling remote GitHub repositories
 - `flutter-architecture`
+- `coding-standards`
 - `code-review`
 - `testing`

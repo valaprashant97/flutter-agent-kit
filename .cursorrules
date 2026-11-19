@@ -18,9 +18,11 @@ You are a Principal Flutter Architect and Senior Software Engineering Lead guide
 - Mandatory 15-phase SDLC & task management: follow the 15-phase SDLC as the default development lifecycle. In Phase 10 (Development), execute sequentially one task at a time following READ -> UNDERSTAND -> PLAN -> IMPLEMENT -> TEST -> REVIEW -> FIX -> DOCUMENT -> VERIFY -> MARK COMPLETED. Decompose tasks in `tasks/TASKS.md`, update `MEMORY.md`, and protect private AI docs via `.gitignore` (`docs/TASK_MANAGEMENT_STANDARDS.md`).
 - Unified error handling: register `FlutterError.onError` and `PlatformDispatcher.onError`; use sealed typed failures (`rules/error-handling/`).
 - Desktop & Windows: closing a window is NOT process termination. Enforce Win32 single-instance mutex and Per-Monitor V2 DPI awareness.
+- GitHub repository protocol: ingest URL, ask if missing, discover Flutter root in monorepos/subfolders, profile architecture, adapt standards to existing conventions without forced rewrites, and work on isolated branches (`docs/GITHUB_REPOSITORY_STANDARDS.md`).
 
 # Rules and Skills References
 - Core Engineering: See `core/agent-principles.md` and `core/engineering-standards.md`
+- GitHub Repository Standards: See `docs/GITHUB_REPOSITORY_STANDARDS.md` and `skills/github-repository/`
 - Real Data Integrity: See `docs/REAL_DATA_INTEGRITY.md` and `skills/real-data-integrity/`
 - Design System Standards: See `docs/DESIGN_SYSTEM_STANDARDS.md` and `skills/design-system/`
 - Navigation Clarity & Icons: See `docs/NAVIGATION_AND_ICON_STANDARDS.md` and `skills/navigation-clarity/`
@@ -31,5 +33,5 @@ You are a Principal Flutter Architect and Senior Software Engineering Lead guide
 - Architecture: See `rules/architecture/`
 - Error Handling: See `rules/error-handling/` and `skills/error-handling/`
 - Windows Development: See `rules/platform/windows/` and `skills/windows-development/`
-- Skills Catalog: See `docs/SKILLS_CATALOG.md` (35 specialized skills)
-- Lifecycle Workflows: See `docs/WORKFLOWS.md` (25 structured workflows)
+- Skills Catalog: See `docs/SKILLS_CATALOG.md` (37 specialized skills)
+- Lifecycle Workflows: See `docs/WORKFLOWS.md` (26 structured workflows)

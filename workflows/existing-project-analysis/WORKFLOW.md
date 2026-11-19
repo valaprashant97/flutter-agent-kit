@@ -5,7 +5,8 @@ This workflow defines the non-destructive discovery and onboarding procedure for
 ---
 
 ## 1. Entry Conditions
-- Agent is opened in an existing Flutter workspace.
+- Agent is opened in an existing Flutter workspace, OR
+- A GitHub repository URL is provided for inspection/audit.
 - No prior project documentation or understanding exists in the session.
 
 ---
@@ -59,8 +60,11 @@ This workflow defines the non-destructive discovery and onboarding procedure for
 ---
 
 ## 4. Related Skills & Rules
+- `skills/github-repository/`
+- `workflows/github-repository/`
 - `skills/project-analysis/`
 - `skills/real-data-integrity/`
+- `docs/GITHUB_REPOSITORY_STANDARDS.md`
 - `core/project-understanding.md`
 - `docs/REAL_DATA_INTEGRITY.md`
 

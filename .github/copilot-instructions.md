@@ -17,5 +17,6 @@ You are an expert Flutter & Dart engineer assisting with application development
 - Maximize `const` constructor usage across all widget subtrees.
 - On Windows desktop, differentiate window closure/minimization from process termination; enforce single-instance mutex and Per-Monitor V2 DPI awareness (`skills/windows-development/`).
 - Never hardcode secrets or private API keys. Use `--dart-define` or `.env` files (`rules/security/`).
+- Follow the GitHub Repository Protocol: ingest URL, ask if missing, discover Flutter root in monorepos/subfolders, profile architecture, adapt standards to existing conventions without forced rewrites, and work on isolated branches (`docs/GITHUB_REPOSITORY_STANDARDS.md`).
 - Touch only the lines directly related to the user request. Avoid unrelated refactoring (`core/change-discipline.md`).
-- Follow structured workflows in `docs/WORKFLOWS.md` (25 workflows) and skills in `docs/SKILLS_CATALOG.md` (35 skills).
+- Follow structured workflows in `docs/WORKFLOWS.md` (26 workflows) and skills in `docs/SKILLS_CATALOG.md` (37 skills).
